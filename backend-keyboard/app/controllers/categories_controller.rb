@@ -5,38 +5,42 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
 
-    render json: @categories
+    render json: @categories.to_json(:include => 
+    {:sounds => {:except => [:updated_at, :created_at]}
+    }, :except => [:udpated_at, :created_at])
   end
 
   # GET /categories/1
   def show
-    render json: @category
+    render json: @category.to_json(:include => 
+    {:sounds => {:except => [:updated_at, :created_at]}
+    }, :except => [:udpated_at, :created_at])
   end
 
-  # POST /categories
-  def create
-    @category = Category.new(category_params)
+  # # POST /categories
+  # def create
+  #   @category = Category.new(category_params)
 
-    if @category.save
-      render json: @category, status: :created, location: @category
-    else
-      render json: @category.errors, status: :unprocessable_entity
-    end
-  end
+  #   if @category.save
+  #     render json: @category, status: :created, location: @category
+  #   else
+  #     render json: @category.errors, status: :unprocessable_entity
+  #   end
+  # end
 
-  # PATCH/PUT /categories/1
-  def update
-    if @category.update(category_params)
-      render json: @category
-    else
-      render json: @category.errors, status: :unprocessable_entity
-    end
-  end
+  # # PATCH/PUT /categories/1
+  # def update
+  #   if @category.update(category_params)
+  #     render json: @category
+  #   else
+  #     render json: @category.errors, status: :unprocessable_entity
+  #   end
+  # end
 
-  # DELETE /categories/1
-  def destroy
-    @category.destroy
-  end
+  # # DELETE /categories/1
+  # def destroy
+  #   @category.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -44,8 +48,8 @@ class CategoriesController < ApplicationController
       @category = Category.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
-    def category_params
-      params.require(:category).permit(:)
-    end
+    # # Only allow a trusted parameter "white list" through.
+    # def category_params
+    #   params.require(:category).permit(:)
+    # end
 end
