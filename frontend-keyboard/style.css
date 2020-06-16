@@ -1,5 +1,225 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: 80px 200px auto 40px;
-    background-color: grey;
-  }
+/* Side Nav */
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* entypo */
+[class*="entypo-"]:before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  text-align: center;
+  font-family: 'entypo', sans-serif;
+}
+
+.side-panel {
+  padding: 30px 0;
+  position: absolute;
+  left: 0px;
+}
+.side-panel:nth-child(2n) {
+  background: #483430;
+}
+.side-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.side-panel > ul > li:first-child {
+  border-top-right-radius: 3px;
+}
+.side-panel > ul > li:first-child a {
+  padding-top: 13px;
+}
+.side-panel > ul > li:last-child {
+  border-bottom-right-radius: 3px;
+}
+.side-panel > ul > li:last-child a {
+  padding-bottom: 13px;
+}
+.side-panel > ul ul {
+  width: 150px;
+  padding-left: 10px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.side-panel > ul ul li:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-right-color: #efefef;
+}
+.side-panel > ul ul li:first-child:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid #efefef;
+  border-right-color: inherit;
+}
+.side-panel > ul ul li:first-child:hover {
+  border-right-color: #fff;
+}
+.side-panel > ul ul li:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.side-panel li {
+  position: relative;
+  background: #efefef;
+}
+.side-panel li:hover {
+  background: #fff;
+}
+.side-panel li:hover > ul {
+  display: block;
+}
+.side-panel a {
+  display: inline-block;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.b li [class*="entypo-"] {
+  display: inline-block;
+  position: relative;
+  left: 105px;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.1s;
+}
+.b .menu-item {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.b > ul {
+  position: relative;
+  left: -110px;
+  transform: translate(0) translateZ(0);
+  width: 170px;
+  transition: transform 0.3s 0.1s ease-in-out;
+}
+.b > ul:hover {
+  transform: translateX(110px);
+  transition: all 0.3s ease-in-out;
+}
+.b > ul:hover li [class*="entypo-"] {
+  transform: translateX(-110px);
+  transition-delay: 0;
+}
+.b > ul:hover .menu-item {
+  opacity: 1;
+  transition: opacity 0.3s 0.2s ease-in-out;
+}
+.b > ul ul {
+  display: block;
+  opacity: 0;
+  transform: translate(-100%);
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.b li:hover ul {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Sound Pad */
+@import "https://fonts.googleapis.com/css?family=Oswald";
+html, body {
+  background: linear-gradient(to left, #fd746c, #ff9068);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Oswald", sans-serif;
+}
+h1 {
+  color: #fff;
+  font-size: 5vw;
+  letter-spacing: 6px;
+}
+.pad {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+  box-shadow: 0 8px 6px -6px black;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.4);
+  user-select: none;
+}
+.box:hover {
+  background-color: #5e5e5e;
+  cursor: pointer;
+}
+.box:active {
+  background-color: #2b2b2b;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.active {
+  background-color: #2b2b2b;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.green-pad {
+  border: 2px solid #2ecc71;
+}
+.red-pad {
+  border: 2px solid #e5446d;
+}
+.blue-pad {
+  border: 2px solid #1abc9c;
+}
+
+/* Record Button */
+#recButton {
+	width: 35px;
+	height: 35px;
+	font-size: 0;
+	background-color: red;
+	border: 0;
+	border-radius: 50%;
+	margin: 18px;
+  outline: none;
+}
+
+/* .notRec{
+	background-color: darkred;
+} */
+
+.Rec{
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes pulse{
+	0%{
+		box-shadow: 0px 0px 5px 0px rgba(173,0,0,.3);
+	}
+	65%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,.3);
+	}
+	90%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,0);
+	}
+}
+
