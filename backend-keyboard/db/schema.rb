@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_182735) do
+ActiveRecord::Schema.define(version: 2020_06_16_015317) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_182735) do
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "track_name"
     t.index ["user_id"], name: "index_tracks_on_user_id"
   end
 
