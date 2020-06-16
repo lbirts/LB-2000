@@ -273,3 +273,2406 @@ FOREIGN KEY ("category_id")
   [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" ORDER BY "sounds"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-06-15 15:10:34 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/luisbernal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/luisbernal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.1ms | Allocations: 480)
+Completed 200 OK in 39ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 2632)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-15 15:10:36 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/luisbernal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/luisbernal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.3ms | Allocations: 191)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 725)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-06-15 15:10:45 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...ms.require(:category).permit(:)
+...                              ^):
+  
+app/controllers/categories_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/categories_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started GET "/categories/" for ::1 at 2020-06-15 15:10:48 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...ms.require(:category).permit(:)
+...                              ^):
+  
+app/controllers/categories_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/categories_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started GET "/category/" for ::1 at 2020-06-15 15:10:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/category"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories" for 127.0.0.1 at 2020-06-15 15:11:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 2.2ms | Allocations: 4772)
+
+
+Started GET "/categories" for ::1 at 2020-06-15 15:11:31 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 1180)
+
+
+Started GET "/categories/5" for ::1 at 2020-06-15 15:11:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 0.0ms | Allocations: 35660)
+
+
+  
+NoMethodError (undefined method `set_category' for #<CategoriesController:0x00007fbe17450e48>
+Did you mean?  set_trace_func):
+  
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/new" for 127.0.0.1 at 2020-06-15 15:11:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"new"}
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms | Allocations: 36049)
+
+
+  
+NoMethodError (undefined method `set_category' for #<CategoriesController:0x00007fbe17360ab0>
+Did you mean?  set_trace_func):
+  
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:11:39 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 0.0ms | Allocations: 35641)
+
+
+  
+NoMethodError (undefined method `set_category' for #<CategoriesController:0x00007fbe182fa7f0>
+Did you mean?  set_trace_func):
+  
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/5" for ::1 at 2020-06-15 15:12:01 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 0.0ms | Allocations: 35615)
+
+
+  
+NoMethodError (undefined method `set_category' for #<CategoriesController:0x00007fbe1826be88>
+Did you mean?  set_trace_func):
+  
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:12:11 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+Completed 404 Not Found in 15ms (ActiveRecord: 2.3ms | Allocations: 1942)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=1):
+  
+app/controllers/categories_controller.rb:44:in `set_category'
+Started GET "/categories" for 127.0.0.1 at 2020-06-15 15:12:18 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 3530)
+
+
+Started GET "/categories/5" for ::1 at 2020-06-15 15:12:21 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 724)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:12:21 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 724)
+
+
+Started GET "/categories/5" for ::1 at 2020-06-15 15:12:49 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+... render json: @category include: sound
+...                        ^~~~~~~):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:12:50 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+... render json: @category include: sound
+...                        ^~~~~~~):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:12:57 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+... render json: @category include: sounds
+...                        ^~~~~~~):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/categories/5" for ::1 at 2020-06-15 15:12:58 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+... render json: @category include: sounds
+...                        ^~~~~~~):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:14:03 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+... render json: @category include: sounds
+...                        ^~~~~~~):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/categories/5" for ::1 at 2020-06-15 15:14:05 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+... render json: @category include: sounds
+...                        ^~~~~~~):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/categories/5" for ::1 at 2020-06-15 15:14:07 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+... render json: @category include: sounds
+...                        ^~~~~~~):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/categories/5" for ::1 at 2020-06-15 15:14:08 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+... render json: @category include: sounds
+...                        ^~~~~~~):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/categories_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:14:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.5ms | Allocations: 6034)
+
+
+  
+NoMethodError (undefined method `sound' for #<Category:0x00007fbe182557a0>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:14:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.5ms | Allocations: 6019)
+
+
+  
+NoMethodError (undefined method `sounds' for #<Category:0x00007fbe17cdc918>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:15:21 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 4.5ms | Allocations: 6019)
+
+
+  
+NoMethodError (undefined method `sound' for #<Category:0x00007fbe1824c5b0>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:15:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected ':', expecting =>
+...der json: @category, :include :sound
+...                              ^):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected ':', expecting =>
+app/controllers/categories_controller.rb:13: syntax error, unexpected ':', expecting =>
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:15:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.9ms | Allocations: 6061)
+
+
+  
+NoMethodError (undefined method `sound' for #<Category:0x00007fbe1b0ed2e8>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:16:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.5ms | Allocations: 6019)
+
+
+  
+NoMethodError (undefined method `sounds' for #<Category:0x00007fbe17351358>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:17:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.1ms | Allocations: 5983)
+
+
+  
+NoMethodError (undefined method `sound' for #<Category:0x00007fbe182e9db0>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:17:27 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+Completed 204 No Content in 11ms (ActiveRecord: 0.8ms | Allocations: 4039)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:17:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:49:in `set_category'
+Completed 200 OK in 22ms (Views: 1.3ms | ActiveRecord: 1.0ms | Allocations: 4031)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:18:05 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:49:in `set_category'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 724)
+
+
+Started GET "/categories/5" for ::1 at 2020-06-15 15:18:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms | Allocations: 5978)
+
+
+  
+NoMethodError (undefined method `sounds' for #<Category:0x00007fbe18a86960>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:18:08 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 3190)
+
+
+  
+NoMethodError (undefined method `sounds' for #<Category:0x00007fbe173a4c10>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:18:15 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 2609)
+
+
+  
+NoMethodError (undefined method `sounds' for #<Category:0x00007fbe17302b40>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:18:18 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 2609)
+
+
+  
+NoMethodError (undefined method `sounds' for #<Category:0x00007fbe17fb6df0>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for ::1 at 2020-06-15 15:18:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms | Allocations: 5977)
+
+
+  
+NoMethodError (undefined method `sound' for #<Category:0x00007fbe18287688>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for ::1 at 2020-06-15 15:18:23 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms | Allocations: 2609)
+
+
+  
+NoMethodError (undefined method `sound' for #<Category:0x00007fbe18bb1e98>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:18:26 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 2609)
+
+
+  
+NoMethodError (undefined method `sound' for #<Category:0x00007fbe18acf660>):
+  
+app/controllers/categories_controller.rb:13:in `show'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories"[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "sounds"[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "sound_name" varchar, "sound" varchar, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX "index_sounds_on_category_id" ON "sounds" ("category_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "tracks"[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "tracks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "track" varchar, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX "index_tracks_on_user_id" ON "tracks" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asounds" ("id" integer NOT NULL PRIMARY KEY, "sound_name" varchar DEFAULT NULL, "sound" varchar DEFAULT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_asounds_on_category_id" ON "asounds" ("category_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "asounds" ("id","sound_name","sound","category_id","created_at","updated_at")
+                     SELECT "id","sound_name","sound","category_id","created_at","updated_at" FROM "sounds"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "sounds"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" integer NOT NULL PRIMARY KEY, "sound_name" varchar DEFAULT NULL, "sound" varchar DEFAULT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_928bd37f75"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_sounds_on_category_id" ON "sounds" ("category_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "sounds" ("id","sound_name","sound","category_id","created_at","updated_at")
+                     SELECT "id","sound_name","sound","category_id","created_at","updated_at" FROM "asounds"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "asounds"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atracks" ("id" integer NOT NULL PRIMARY KEY, "track" varchar DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "tindex_atracks_on_user_id" ON "atracks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atracks" ("id","track","user_id","created_at","updated_at")
+                     SELECT "id","track","user_id","created_at","updated_at" FROM "tracks"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "tracks"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "tracks" ("id" integer NOT NULL PRIMARY KEY, "track" varchar DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_a9ae83adcc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_tracks_on_user_id" ON "tracks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tracks" ("id","track","user_id","created_at","updated_at")
+                     SELECT "id","track","user_id","created_at","updated_at" FROM "atracks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "atracks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200615182735)[0m
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200615182125),
+(20200615182405),
+(20200615182615);
+
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-15 20:19:57.055523"], ["updated_at", "2020-06-15 20:19:57.055523"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "aad3ae3c08b0c29096fe32c72ebfe34e161b047a"], ["created_at", "2020-06-15 20:19:57.088472"], ["updated_at", "2020-06-15 20:19:57.088472"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sounds"[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "sound_name" varchar, "sound" varchar, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX "index_sounds_on_category_id" ON "sounds" ("category_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tracks"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "tracks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "track" varchar, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_tracks_on_user_id" ON "tracks" ("user_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asounds" ("id" integer NOT NULL PRIMARY KEY, "sound_name" varchar DEFAULT NULL, "sound" varchar DEFAULT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_asounds_on_category_id" ON "asounds" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asounds" ("id","sound_name","sound","category_id","created_at","updated_at")
+                     SELECT "id","sound_name","sound","category_id","created_at","updated_at" FROM "sounds"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "sounds"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "sounds" ("id" integer NOT NULL PRIMARY KEY, "sound_name" varchar DEFAULT NULL, "sound" varchar DEFAULT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_928bd37f75"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_sounds_on_category_id" ON "sounds" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "sounds" ("id","sound_name","sound","category_id","created_at","updated_at")
+                     SELECT "id","sound_name","sound","category_id","created_at","updated_at" FROM "asounds"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asounds"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atracks" ("id" integer NOT NULL PRIMARY KEY, "track" varchar DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_atracks_on_user_id" ON "atracks" ("user_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "atracks" ("id","track","user_id","created_at","updated_at")
+                     SELECT "id","track","user_id","created_at","updated_at" FROM "tracks"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "tracks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tracks" ("id" integer NOT NULL PRIMARY KEY, "track" varchar DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_a9ae83adcc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tracks_on_user_id" ON "tracks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tracks" ("id","track","user_id","created_at","updated_at")
+                     SELECT "id","track","user_id","created_at","updated_at" FROM "atracks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atracks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200615182735)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200615182125),
+(20200615182405),
+(20200615182615);
+
+[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-15 20:19:57.287049"], ["updated_at", "2020-06-15 20:19:57.287049"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-06-15 20:19:57.327172"], ["key", "environment"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "aad3ae3c08b0c29096fe32c72ebfe34e161b047a"], ["created_at", "2020-06-15 20:19:57.348908"], ["updated_at", "2020-06-15 20:19:57.348908"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Claps & Kicks"], ["created_at", "2020-06-15 20:19:57.428375"], ["updated_at", "2020-06-15 20:19:57.428375"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "FX"], ["created_at", "2020-06-15 20:19:57.435568"], ["updated_at", "2020-06-15 20:19:57.435568"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Percs"], ["created_at", "2020-06-15 20:19:57.443559"], ["updated_at", "2020-06-15 20:19:57.443559"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Fye Clap"], ["sound", "../backend-keyboard/Media/MC-505/Claps/FyeClap.wav"], ["category_id", 1], ["created_at", "2020-06-15 20:19:57.468068"], ["updated_at", "2020-06-15 20:19:57.468068"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Cricket Slap"], ["sound", "../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav"], ["category_id", 1], ["created_at", "2020-06-15 20:19:57.475742"], ["updated_at", "2020-06-15 20:19:57.475742"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.7ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Space Clap"], ["sound", "../backend-keyboard/Media/MC-505/Claps/Space20Clap.wav"], ["category_id", 1], ["created_at", "2020-06-15 20:19:57.517308"], ["updated_at", "2020-06-15 20:19:57.517308"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "808 Drum"], ["sound", "../backend-keyboard/Media/MC-505/Kicks/808drum.wav"], ["category_id", 1], ["created_at", "2020-06-15 20:19:57.528886"], ["updated_at", "2020-06-15 20:19:57.528886"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.9ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Classic 808"], ["sound", "../backend-keyboard/Media/MC-505/Kicks/Classic808.wav"], ["category_id", 1], ["created_at", "2020-06-15 20:19:57.535104"], ["updated_at", "2020-06-15 20:19:57.535104"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Drum Kick"], ["sound", "../backend-keyboard/Media/MC-505/Kicks/DrumKitKick.wav"], ["category_id", 1], ["created_at", "2020-06-15 20:19:57.543170"], ["updated_at", "2020-06-15 20:19:57.543170"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (2.9ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Low Kick"], ["sound", "../backend-keyboard/Media/MC-505/Kicks/LowKick.wav"], ["category_id", 1], ["created_at", "2020-06-15 20:19:57.678332"], ["updated_at", "2020-06-15 20:19:57.678332"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Pumped Up Kick"], ["sound", "../backend-keyboard/Media/MC-505/Kicks/PumpedUpKick.wav"], ["category_id", 1], ["created_at", "2020-06-15 20:19:57.703044"], ["updated_at", "2020-06-15 20:19:57.703044"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "ThumbyKick"], ["sound", "../backend-keyboard/Media/MC-505/Kicks/ThumbyKick1.wav"], ["category_id", 1], ["created_at", "2020-06-15 20:19:57.754955"], ["updated_at", "2020-06-15 20:19:57.754955"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (1.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Breakdance Perc"], ["sound", "../backend-keyboard/Media/MC-505/Percs/BreakdancePerc.wav"], ["category_id", 3], ["created_at", "2020-06-15 20:19:57.795183"], ["updated_at", "2020-06-15 20:19:57.795183"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (6.0ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Claves"], ["sound", "../backend-keyboard/Media/MC-505/Percs/Claves.wav"], ["category_id", 3], ["created_at", "2020-06-15 20:19:57.825006"], ["updated_at", "2020-06-15 20:19:57.825006"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (1.1ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Get Low"], ["sound", "../backend-keyboard/Media/MC-505/Percs/Get Low Perc.wav"], ["category_id", 3], ["created_at", "2020-06-15 20:19:57.864072"], ["updated_at", "2020-06-15 20:19:57.864072"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Get Da Bread"], ["sound", "../backend-keyboard/Media/MC-505/Percs/GetDaBread.wav"], ["category_id", 3], ["created_at", "2020-06-15 20:19:57.882603"], ["updated_at", "2020-06-15 20:19:57.882603"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Nice Belly"], ["sound", "../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav"], ["category_id", 3], ["created_at", "2020-06-15 20:19:57.916319"], ["updated_at", "2020-06-15 20:19:57.916319"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Nintendo DS"], ["sound", "../backend-keyboard/Media/MC-505/Percs/NintendoDS.wav"], ["category_id", 3], ["created_at", "2020-06-15 20:19:57.933236"], ["updated_at", "2020-06-15 20:19:57.933236"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Woah Perc"], ["sound", "../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav"], ["category_id", 3], ["created_at", "2020-06-15 20:19:57.943298"], ["updated_at", "2020-06-15 20:19:57.943298"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Shaker"], ["sound", "../backend-keyboard/Media/MC-505/Percs/Shaker1.wav"], ["category_id", 3], ["created_at", "2020-06-15 20:19:57.962856"], ["updated_at", "2020-06-15 20:19:57.962856"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Nintendo Switch"], ["sound", "../backend-keyboard/Media/MC-505/Percs/NintendoFlavouredSwitch.wav"], ["category_id", 3], ["created_at", "2020-06-15 20:19:57.973833"], ["updated_at", "2020-06-15 20:19:57.973833"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (1.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "80s Action"], ["sound", "../backend-keyboard/Media/MC-505/FX/80sAction.wav"], ["category_id", 2], ["created_at", "2020-06-15 20:19:57.982518"], ["updated_at", "2020-06-15 20:19:57.982518"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Alvins Spaceship"], ["sound", "../backend-keyboard/Media/MC-505/FX/AlvinsSpaceship.wav"], ["category_id", 2], ["created_at", "2020-06-15 20:19:57.990798"], ["updated_at", "2020-06-15 20:19:57.990798"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Bad Scratcher"], ["sound", "../backend-keyboard/Media/MC-505/FX/BadScratcher.wav"], ["category_id", 2], ["created_at", "2020-06-15 20:19:58.003209"], ["updated_at", "2020-06-15 20:19:58.003209"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.7ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "College Dropout"], ["sound", "../backend-keyboard/Media/MC-505/FX/CollegeDropout.wav"], ["category_id", 2], ["created_at", "2020-06-15 20:19:58.013532"], ["updated_at", "2020-06-15 20:19:58.013532"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Could Be Hard"], ["sound", "../backend-keyboard/Media/MC-505/FX/CouldBeHard.wav"], ["category_id", 2], ["created_at", "2020-06-15 20:19:58.023870"], ["updated_at", "2020-06-15 20:19:58.023870"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Hard Ass FX"], ["sound", "../backend-keyboard/Media/MC-505/FX/HardAssFX.wav"], ["category_id", 2], ["created_at", "2020-06-15 20:19:58.032984"], ["updated_at", "2020-06-15 20:19:58.032984"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Noisery"], ["sound", "../backend-keyboard/Media/MC-505/FX/Noisery.wav"], ["category_id", 2], ["created_at", "2020-06-15 20:19:58.038353"], ["updated_at", "2020-06-15 20:19:58.038353"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Rev It Cymbal"], ["sound", "../backend-keyboard/Media/MC-505/FX/Rev'ItCymbal.wav"], ["category_id", 2], ["created_at", "2020-06-15 20:19:58.054104"], ["updated_at", "2020-06-15 20:19:58.054104"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.7ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "sound", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Roboboot"], ["sound", "../backend-keyboard/Media/MC-505/FX/Roboboot1.wav"], ["category_id", 2], ["created_at", "2020-06-15 20:19:58.062980"], ["updated_at", "2020-06-15 20:19:58.062980"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Bauce"], ["created_at", "2020-06-15 20:19:58.086509"], ["updated_at", "2020-06-15 20:19:58.086509"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Lo"], ["created_at", "2020-06-15 20:19:58.095334"], ["updated_at", "2020-06-15 20:19:58.095334"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "JazziJax"], ["created_at", "2020-06-15 20:19:58.110526"], ["updated_at", "2020-06-15 20:19:58.110526"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Keauli"], ["created_at", "2020-06-15 20:19:58.155128"], ["updated_at", "2020-06-15 20:19:58.155128"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Rianu Keeves"], ["created_at", "2020-06-15 20:19:58.203907"], ["updated_at", "2020-06-15 20:19:58.203907"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Nhuck Chorris"], ["created_at", "2020-06-15 20:19:58.223976"], ["updated_at", "2020-06-15 20:19:58.223976"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Prison Mike"], ["created_at", "2020-06-15 20:19:58.232353"], ["updated_at", "2020-06-15 20:19:58.232353"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/categories/5" for 127.0.0.1 at 2020-06-15 15:20:44 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 404 Not Found in 13ms (ActiveRecord: 1.4ms | Allocations: 2707)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=5):
+  
+app/controllers/categories_controller.rb:52:in `set_category'
+Started GET "/categories/1" for ::1 at 2020-06-15 15:20:46 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms | Allocations: 5338)
+
+
+  
+NoMethodError (undefined method `sound' for #<Category:0x00007fdef5efa660>
+Did you mean?  sounds
+               sounds=):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:20:51 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 2747)
+
+
+  
+NoMethodError (undefined method `sound' for #<Category:0x00007fdef5d3e100>
+Did you mean?  sounds
+               sounds=):
+  
+app/controllers/categories_controller.rb:13:in `show'
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:20:58 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 134ms (ActiveRecord: 2.4ms | Allocations: 14861)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:20:59 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.6ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:02 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.6ms | Allocations: 2168)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:02 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 0.8ms | Allocations: 2168)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:21:02 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.7ms | Allocations: 2184)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:02 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.6ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:21:04 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.6ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:21:07 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (1.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 13ms (ActiveRecord: 1.5ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:10 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.7ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:11 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.7ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:11 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.7ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:11 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.6ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:13 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:21:14 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 5ms (ActiveRecord: 0.4ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:14 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:15 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 0.7ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:15 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.5ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:15 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.8ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:15 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.4ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:16 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 11ms (ActiveRecord: 0.6ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:21:25 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 13ms (ActiveRecord: 0.5ms | Allocations: 2167)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:21:28 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 1.1ms | Allocations: 2167)
+
+
+Started GET "/categories" for ::1 at 2020-06-15 15:21:29 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 1215)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:21:36 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.5ms | Allocations: 2182)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:21:37 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 0.6ms | Allocations: 2167)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-15 15:21:52 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/luisbernal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/luisbernal/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 91.5ms | Allocations: 200)
+Completed 200 OK in 129ms (Views: 126.1ms | ActiveRecord: 0.0ms | Allocations: 3830)
+
+
+Started GET "/categories" for ::1 at 2020-06-15 15:21:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 13.6ms | ActiveRecord: 2.3ms | Allocations: 4889)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-06-15 15:21:59 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.6ms | Allocations: 1166)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:22:02 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 841)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:22:07 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 724)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:22:13 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 724)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:22:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (1.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:14:in `show'
+Completed 200 OK in 257ms (Views: 156.2ms | ActiveRecord: 4.9ms | Allocations: 11384)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:22:17 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:14:in `show'
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:24:44 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:14:in `show'
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:24:46 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:52:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:14:in `show'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.7ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:49 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 30ms (ActiveRecord: 2.5ms | Allocations: 10883)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:50 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:50 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.6ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:51 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 6ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:51 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 1.3ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:51 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:51 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:52 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.6ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:24:52 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 1.0ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:52 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (1.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 11ms (ActiveRecord: 1.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:52 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:52 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:53 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 22ms (ActiveRecord: 0.5ms | Allocations: 2475)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:53 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 11ms (ActiveRecord: 0.9ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:53 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:53 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 1.1ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:53 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:54 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 11ms (ActiveRecord: 0.7ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:54 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.6ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:24:55 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:24:56 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 12ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:57 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 12ms (ActiveRecord: 0.6ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:24:57 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 0.9ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:06 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.4ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:06 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 11ms (ActiveRecord: 0.8ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:06 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.4ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:06 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.7ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:07 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.6ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:07 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:08 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 0.7ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:25:43 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 0.6ms | Allocations: 2473)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 29ms (ActiveRecord: 2.3ms | Allocations: 10865)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:51 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 9ms (ActiveRecord: 0.7ms | Allocations: 2456)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:51 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.6ms | Allocations: 2456)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:51 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms | Allocations: 2456)
+
+
+Started GET "/categories" for ::1 at 2020-06-15 15:25:54 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 1187)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:25:58 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (1.8ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 12ms (ActiveRecord: 2.1ms | Allocations: 2456)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:26:03 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 0.6ms | Allocations: 2456)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:26:14 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 7ms (ActiveRecord: 0.6ms | Allocations: 2456)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-06-15 15:26:24 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1165)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:26:28 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.6ms | Allocations: 2456)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:26:30 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 0.8ms | Allocations: 2456)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-06-15 15:26:44 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1165)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:26:49 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 8ms (ActiveRecord: 0.6ms | Allocations: 2456)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:26:54 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (2.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 204 No Content in 19ms (ActiveRecord: 2.4ms | Allocations: 2456)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-06-15 15:26:56 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1165)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:26:59 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 44ms (Views: 21.2ms | ActiveRecord: 3.7ms | Allocations: 11419)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:27:02 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.6ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:28:05 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:28:08 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.4ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:28:10 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:28:12 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:28:13 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:28:17 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 3019)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:28:18 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.4ms | Allocations: 2999)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-06-15 15:28:27 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms | Allocations: 1183)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:28:29 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 2999)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:29:11 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:57:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 204 No Content in 97ms (ActiveRecord: 7.0ms | Allocations: 11073)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:29:13 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:57:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:16:in `show'
+Completed 204 No Content in 11ms (ActiveRecord: 0.5ms | Allocations: 2661)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:30:33 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:13: syntax error, unexpected '(', expecting end
+    render json: @category(:include => {
+                          ^
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:15: syntax error, unexpected ',', expecting end
+    }, :except => [:updated_at, :cr...
+     ^
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:15: syntax error, unexpected ')', expecting end
+... => [:updated_at, :created_at])
+...                              ^
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/categories_controller.rb:61: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/categories_controller.rb:13: syntax error, unexpected '(', expecting end
+app/controllers/categories_controller.rb:15: syntax error, unexpected ',', expecting end
+app/controllers/categories_controller.rb:15: syntax error, unexpected ')', expecting end
+app/controllers/categories_controller.rb:61: syntax error, unexpected end-of-input, expecting end
+app/controllers/categories_controller.rb:13: syntax error, unexpected '(', expecting end
+app/controllers/categories_controller.rb:15: syntax error, unexpected ',', expecting end
+app/controllers/categories_controller.rb:15: syntax error, unexpected ')', expecting end
+app/controllers/categories_controller.rb:61: syntax error, unexpected end-of-input, expecting end
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:30:46 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 10898)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:30:49 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2478)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:30:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 200 OK in 309ms (Views: 0.1ms | ActiveRecord: 7.7ms | Allocations: 10902)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:31:00 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2491)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2020-06-15 15:31:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 200 OK in 108ms (Views: 0.3ms | ActiveRecord: 4.4ms | Allocations: 10919)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:31:25 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 2536)
+
+
+Started GET "/categories/1" for ::1 at 2020-06-15 15:31:27 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 200 OK in 40ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 2539)
+
+
+Started GET "/categories/2" for ::1 at 2020-06-15 15:31:32 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 2530)
+
+
+Started GET "/categories/3" for ::1 at 2020-06-15 15:31:36 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:54:in `set_category'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:13:in `show'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2530)
+
+
+Started GET "/categories" for ::1 at 2020-06-15 15:32:20 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 1.8ms | Allocations: 4888)
+
+
+Started GET "/categories" for 127.0.0.1 at 2020-06-15 15:33:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 2.2ms | Allocations: 4853)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-06-15 15:33:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/sounds/1" for 127.0.0.1 at 2020-06-15 15:33:09 -0500
+Processing by SoundsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 484ms (ActiveRecord: 0.0ms | Allocations: 35658)
+
+
+  
+NoMethodError (undefined method `set_sound' for #<SoundsController:0x00007fdef41f8968>
+Did you mean?  set_response!):
+  
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/sounds/1" for 127.0.0.1 at 2020-06-15 15:33:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SoundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSound Load (1.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sounds_controller.rb:44:in `set_sound'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sounds_controller.rb:13:in `show'
+Completed 200 OK in 64ms (Views: 28.7ms | ActiveRecord: 4.0ms | Allocations: 10165)
+
+
+Started GET "/users" for ::1 at 2020-06-15 15:33:33 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...params.require(:user).permit(:)
+...                              ^):
+  
+app/controllers/users_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/users_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started GET "/users/1" for ::1 at 2020-06-15 15:34:17 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...params.require(:user).permit(:)
+...                              ^):
+  
+app/controllers/users_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/users_controller.rb:49: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started GET "/users/6" for 127.0.0.1 at 2020-06-15 15:34:38 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+Started GET "/users" for 127.0.0.1 at 2020-06-15 15:34:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for ::1 at 2020-06-15 15:34:48 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 4634)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-06-15 15:34:49 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for 127.0.0.1 at 2020-06-15 15:34:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 717)
+
+
+Started GET "/users/1" for ::1 at 2020-06-15 15:35:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 20ms (Views: 6.0ms | ActiveRecord: 1.2ms | Allocations: 6437)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-06-15 15:35:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1641)
+
+
+Started GET "/users/1" for ::1 at 2020-06-15 15:39:17 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:13: syntax error, unexpected '}', expecting =>
+...ept [:created_at, :updated_at]}},
+...                              ^
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:14: syntax error, unexpected ')', expecting end
+...ept [:created_at, :updated_at])
+...                              ^
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:14: syntax error, unexpected ')', expecting end
+app/controllers/users_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:13: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:14: syntax error, unexpected ')', expecting end
+app/controllers/users_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for ::1 at 2020-06-15 15:41:01 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:14: syntax error, unexpected '}', expecting =>
+...ept [:created_at, :updated_at]}
+...                              ^
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:15: syntax error, unexpected ')', expecting end
+...ept [:created_at, :updated_at])
+...                              ^
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:53: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:14: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected ')', expecting end
+app/controllers/users_controller.rb:53: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:14: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected ')', expecting end
+app/controllers/users_controller.rb:53: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for 127.0.0.1 at 2020-06-15 15:41:03 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:14: syntax error, unexpected '}', expecting =>
+...ept [:created_at, :updated_at]}
+...                              ^
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:15: syntax error, unexpected ')', expecting end
+...ept [:created_at, :updated_at])
+...                              ^
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/users_controller.rb:53: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:14: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected ')', expecting end
+app/controllers/users_controller.rb:53: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:14: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected ')', expecting end
+app/controllers/users_controller.rb:53: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for 127.0.0.1 at 2020-06-15 15:41:57 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 6195)
+
+
+Started GET "/users/1" for ::1 at 2020-06-15 15:41:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1466)
+
+
+Started GET "/users/1" for ::1 at 2020-06-15 15:42:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 1466)
+
+
+Started GET "/tracks" for ::1 at 2020-06-15 15:43:06 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/tracks_controller.rb:49: syntax error, unexpected ',', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...arams.require(:track).permit(:, :user_id)
+...                              ^):
+  
+app/controllers/tracks_controller.rb:49: syntax error, unexpected ',', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/tracks_controller.rb:49: syntax error, unexpected ',', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started GET "/tracks" for ::1 at 2020-06-15 15:43:12 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TracksController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  ↳ app/controllers/tracks_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 1.3ms | Allocations: 1839)
+
+
+Started GET "/tracks" for ::1 at 2020-06-15 15:45:51 -0500
+Processing by TracksController#index as HTML
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  ↳ app/controllers/tracks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 796)
+
+
+Started GET "/tracks" for ::1 at 2020-06-15 15:48:24 -0500
+Processing by TracksController#index as HTML
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  ↳ app/controllers/tracks_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 796)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-06-15 16:04:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 6017)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2020-06-15 16:04:11 -0500
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/tracks_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+    render json: @track include: :user 
+                        ^~~~~~~
+/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/tracks_controller.rb:50: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/tracks_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/tracks_controller.rb:50: syntax error, unexpected end-of-input, expecting end
+app/controllers/tracks_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/tracks_controller.rb:50: syntax error, unexpected end-of-input, expecting end
+Started GET "/tracks" for 127.0.0.1 at 2020-06-15 16:04:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/tracks_controller.rb:50: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/tracks_controller.rb:50: syntax error, unexpected end-of-input, expecting end
+app/controllers/tracks_controller.rb:50: syntax error, unexpected end-of-input, expecting end
+Started GET "/tracks" for 127.0.0.1 at 2020-06-15 16:04:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/luisbernal/Desktop/keyboard-sound-app/backend-keyboard/app/controllers/tracks_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+    render json: @track include: :user
+                        ^~~~~~~):
+  
+app/controllers/tracks_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/tracks_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/tracks" for 127.0.0.1 at 2020-06-15 16:04:43 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TracksController#index as HTML
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  ↳ app/controllers/tracks_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 2.9ms | ActiveRecord: 1.7ms | Allocations: 1844)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2020-06-15 16:04:50 -0500
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tracks_controller.rb:44:in `set_track'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.2ms | Allocations: 893)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Track with 'id'=1):
+  
+app/controllers/tracks_controller.rb:44:in `set_track'

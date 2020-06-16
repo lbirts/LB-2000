@@ -10,8 +10,8 @@ class TracksController < ApplicationController
 
   # GET /tracks/1
   def show
-    render json: @track
-  end
+    render json: @track, include: :user
+  end 
 
   # POST /tracks
   def create
@@ -24,14 +24,14 @@ class TracksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /tracks/1
-  def update
-    if @track.update(track_params)
-      render json: @track
-    else
-      render json: @track.errors, status: :unprocessable_entity
-    end
-  end
+  # # PATCH/PUT /tracks/1
+  # def update
+  #   if @track.update(track_params)
+  #     render json: @track
+  #   else
+  #     render json: @track.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /tracks/1
   def destroy
@@ -46,6 +46,6 @@ class TracksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def track_params
-      params.require(:track).permit(:, :user_id)
+      params.require(:track).permit(:track, :user_id)
     end
 end
