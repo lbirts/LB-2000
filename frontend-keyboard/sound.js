@@ -5,6 +5,11 @@ const sidepanel = document.querySelector(".side-panel ul")
 const boxes = document.querySelectorAll(".box")
 let Recording = false
 let soundArray = []
+let recordEnd;
+let recordStart;
+let recordTime;
+let boxTime;
+let boxStamp;
 
 // render category on page
 function renderCategory(category) {
@@ -51,11 +56,21 @@ function renderSounds(sound, index) {
     p.dataset.sound = sound.sound
     box.dataset.sound = sound.sound
     box.dataset.letter = box.innerText
+    box.dataset.id = sound.id
     box.append(p)
     box.addEventListener("click", e =>{
         playAudio(e.target.dataset.sound)
         if (Recording) {
-            soundArray.push(e.target.dataset.sound)
+            boxTime = performance.now()
+            boxStamp = boxTime - recordEnd
+            console.log(`This is the box time ${boxStamp}`)
+            // boxStamp = recordStart - boxTime
+            // console.log(boxTime)
+            // console.log(`This is the box timestamp ${boxStamp}`)
+            // let soundItem = e.target.dataset.id
+            // let soundTime = 
+            // soundArray.push(e.target.dataset.sound)
+            // console.timeLog('Record')
         }
     })
 }
@@ -87,15 +102,23 @@ sidepanel.addEventListener("click", e => {
 // Record button animation
 const recordBtn = document.getElementById("recButton")
 
-recordBtn.addEventListener("click", () => {
+recordBtn.addEventListener("click", (e) => {
     recordBtn.classList.toggle('Rec')
     if (Recording) {
         Recording = false
-
+        // console.log(e.timeStamp)
+        recordEnd = performance.now()
+        // console.log(recordEnd)
+        // console.timeEnd('Record')
     } else {
         Recording = true
-        
+        // console.log(e.timeStamp)
+        recordStart = performance.now()
+        // console.log(recordStart)
+        // console.time('Record')
     }
+    recordTime = recordEnd - recordStart
+    console.log(`This is the time ${recordTime}`)
 });	
 
 // fetch single category
