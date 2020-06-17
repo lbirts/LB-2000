@@ -78,6 +78,15 @@ function playTrack(array) {
     })
 }
 
+// reusable function for recording sounds on click or key press
+function eventRecord(element) {
+    playAudio(element.dataset.sound)
+    if (Recording) {
+        boxTime = performance.now()
+        soundArray.push({sound: element.dataset.sound, time: boxTime})
+    }
+}
+
 // reusable function for playing sounds
 function playAudio(sound) {
     const audio = new Audio(sound)
@@ -89,7 +98,7 @@ document.addEventListener("keypress", e => {
     for (let i = 0; i < boxes.length; i++) {
         let box = boxes[i]
         if (box.dataset.letter.toLowerCase() == e.key) {
-            playAudio(box.dataset.sound)
+            eventRecord(box)
         }
     }
 })
@@ -97,11 +106,7 @@ document.addEventListener("keypress", e => {
 // click event for saving sound and time interval into sound array
 boxes.forEach(box => {
     box.addEventListener("click", (e) => {
-        playAudio(e.target.dataset.sound)
-        if (Recording) {
-            boxTime = performance.now()
-            soundArray.push({sound: e.target.dataset.sound, time: boxTime})
-        }
+       eventRecord(e.target)
     })    
 })
 

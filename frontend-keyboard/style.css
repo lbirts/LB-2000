@@ -15,9 +15,6 @@
   position: absolute;
   left: 0px;
 }
-.side-panel:nth-child(2n) {
-  background: #483430;
-}
 .side-panel ul {
   margin: 0;
   padding: 0;
@@ -139,6 +136,13 @@ html, body {
   align-items: center;
   overflow: hidden;
   font-family: "Oswald", sans-serif;
+}
+h2 {
+  position: absolute;
+  margin-left: 380px;
+  top: 40px;
+  color: #fff;
+  letter-spacing: 2px;
 }
 h1 {
   color: #fff;
