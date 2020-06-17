@@ -11,12 +11,44 @@
       <title>SoundBoard</title>
   </head>
   <body>
-    <h2 class="mt-2">Hi, DJ Name!</h2>
+
+    <!-- Login Modal -->
+    <div id="modal" class="loginModal">
+      <div class="login-page modalconent">
+        <div class="form">
+          <form class="login-form">
+            <h3 class="message mt-0 mb-3">Enter your username to login/signup</h3>
+            <input type="text" id="username" placeholder="username"/>
+            <button id="loginBtn">login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+     <!-- Track Modal -->
+  <div class="modal fade" id="trackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="track-page modalconent">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="form">
+        <form class="track-form">
+          <h3 class="message mt-0 mb-3">Name your Track</h3>
+          <input type="text" id="track_name" placeholder="track name"/>
+          <button id="submitBtn">Submit</button>
+        </form>
+      </div>
+    </div>
+  <div class="modal-dialog" role="document"></div></div>
+  </div>
+
+    <h2 class="mt-2 djName">Hi, DJ Name!</h2>
     <!-- Record Button -->
     <p class="text-white">Click the button to start/stop recording</p>
     <div class="row">
-      <div class="col-md-7"><button id="recButton"></button></div>
-      <div class="save col-md-3 mt-3"><img src="https://img.icons8.com/office/40/000000/save.png"/></div>
+      <div class="col-md-5"><button id="recButton"></button></div>
+      <div class="col-md-4 pt-1 mt-2 playPause" id="nowPlaying"><img src="https://img.icons8.com/android/48/000000/play.png"/></div>
+      <div class="save col-md-3 mt-3" data-toggle="modal" data-target="#trackModal"><img src="https://img.icons8.com/office/40/000000/save.png"/></div>
     </div>
     <!-- Sound Pad  -->
     <h1>SOUND PAD</h1>
@@ -42,9 +74,9 @@
         <ul>
           <li><a><span class="entypo-plus-circled"></span><span class="menu-item">My Tracks</span></a>
             <ul class="track-list">
-              <li><a class="entypo-star">Track 1</a></li>
+              <!-- <li><a class="entypo-star">Track 1</a></li>
               <li><a class="entypo-star">Track 2</a></li>
-              <li><a class="entypo-star">Track 3</a></li>
+              <li><a class="entypo-star">Track 3</a></li> -->
             </ul>
           </li>
           <!-- <li><a><span class="entypo-note"></span><span class="menu-item">Category 1</span></a></li>
@@ -57,4 +89,4 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
-</html>
+</html>b// 

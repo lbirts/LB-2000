@@ -19,6 +19,7 @@ class TracksController < ApplicationController
 
   # POST /tracks
   def create
+    # byebug
     @track = Track.new(track_params)
 
     if @track.save
@@ -50,6 +51,6 @@ class TracksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def track_params
-      params.require(:track).permit(:track, :user_id)
+      params.require(:track).permit(:filename, :user_id, :track_name)
     end
 end

@@ -1,5 +1,8 @@
-/* Side Nav */
+@import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+/* Side Nav */
 /* entypo */
 [class*="entypo-"]:before {
   display: inline-block;
@@ -124,8 +127,76 @@
   transform: translate(0);
 }
 
+/* Modal */
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 20px;
+}
+#modal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+}
+.modalconent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: #fff; */
+  width: 80%;
+  padding: 20px;
+}
+
 /* Sound Pad */
-@import "https://fonts.googleapis.com/css?family=Oswald";
 html, body {
   background: linear-gradient(to left, #fd746c, #ff9068);
   height: 100%;
@@ -173,7 +244,6 @@ h1 {
   cursor: pointer;
 }
 .box:active {
-  background-color: #2b2b2b;
   transform: scale(1.1);
   transition: all 0.2s;
 }
@@ -225,5 +295,21 @@ h1 {
 	90%{
 		box-shadow: 0px 0px 5px 13px rgba(173,0,0,0);
 	}
+}
+
+.Random{
+  animation-name:  random;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+@keyframes random {
+  15% { background-color: rgb(119, 0, 255); } 
+  30% { background-color: rgb(4, 0, 255); } 
+  45% { background-color: rgb(7, 231, 56); } 
+  60% { background-color: rgb(255, 0, 13); }
+  75% { background-color: rgb(11, 243, 212); }  
 }
 
