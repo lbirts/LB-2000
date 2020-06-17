@@ -1,17 +1,19 @@
+// Global URLs
 const categoryURL = "http://localhost:3000/categories"
 const soundsURL = "http://localhost:3000/sounds"
 const userURL = "http://localhost:3000/users"
+
+// Global elements
 const sidepanel = document.querySelector(".side-panel ul")
 const boxes = document.querySelectorAll(".box")
+const recordBtn = document.getElementById("recButton")
+
+// Global Variables
 let Recording = false
 let soundArray = []
-let recordEnd;
-let recordStart;
-let recordTime;
-let boxTime;
-let boxStamp;
+let track = []
 
-// render category on page
+// function to render category on page
 function renderCategory(category) {
     const li = document.createElement("li")
     const a = document.createElement("a")
@@ -29,7 +31,7 @@ function renderCategory(category) {
     sidepanel.append(li)
 }
 
-// render track on page
+// function to render track on page
 function renderTrack(track) {
     const trackList = document.querySelector(".track-list")
     trackList.innerHTML = ""
@@ -39,13 +41,10 @@ function renderTrack(track) {
     a.innerText = "Track 4"
     li.append(a)
     trackList.append(li)
-    trackList.addEventListener("click", (e) => {
-        playArray(soundArray)
-    })
 }
 
 
-// render sounds
+// function to render sounds
 function renderSounds(sound, index) {
     const box = boxes[index]
     if (box.querySelector("p")) {
@@ -58,72 +57,75 @@ function renderSounds(sound, index) {
     box.dataset.letter = box.innerText
     box.dataset.id = sound.id
     box.append(p)
-    box.addEventListener("click", e =>{
-        playAudio(e.target.dataset.sound)
-        if (Recording) {
-            boxTime = performance.now()
-            boxStamp = boxTime - recordEnd
-            console.log(`This is the box time ${boxStamp}`)
-            // boxStamp = recordStart - boxTime
-            // console.log(boxTime)
-            // console.log(`This is the box timestamp ${boxStamp}`)
-            // let soundItem = e.target.dataset.id
-            // let soundTime = 
-            // soundArray.push(e.target.dataset.sound)
-            // console.timeLog('Record')
-        }
+}
+
+// function to play array of sounds with their respective delays
+function playwithDelay(sound, delay) {
+    setTimeout(function() {
+        playAudio(sound)
+    }, delay)
+}
+
+// function to play track (array of sounds)
+function playTrack(array) {
+    track = array.map(obj => {
+        delay = obj.time - array[0].time
+        // delay = obj.time - recordStart
+        // delay6 = obj.time - recordTime
+        playwithDelay(obj.sound, delay)
+        const object = {sound: obj.sound, time: delay}
+        return object
     })
 }
 
-function playArray(array) {
-    array.forEach(playAudio)
+// reusable function for playing sounds
+function playAudio(sound) {
+    const audio = new Audio(sound)
+    audio.play()
 }
+
+// event listner for key press
 document.addEventListener("keypress", e => {
     for (let i = 0; i < boxes.length; i++) {
         let box = boxes[i]
         if (box.dataset.letter.toLowerCase() == e.key) {
             playAudio(box.dataset.sound)
         }
-        // const element = boxes[i];
-        
     }
 })
 
-function playAudio(sound) {
-    const audio = new Audio(sound)
-    audio.play()
-}
+// click event for saving sound and time interval into sound array
+boxes.forEach(box => {
+    box.addEventListener("click", (e) => {
+        playAudio(e.target.dataset.sound)
+        if (Recording) {
+            boxTime = performance.now()
+            soundArray.push({sound: e.target.dataset.sound, time: boxTime})
+        }
+    })    
+})
 
 // category on click event
 sidepanel.addEventListener("click", e => {
-    getSingleCategory(e.target)
+    if (e.target.dataset.id) {
+        getSingleCategory(e.target)
+    } else {
+        playTrack(soundArray)
+    }
 })
 
-// Record button animation
-const recordBtn = document.getElementById("recButton")
-
+// Record button animation / recording 
 recordBtn.addEventListener("click", (e) => {
     recordBtn.classList.toggle('Rec')
     if (Recording) {
         Recording = false
-        // console.log(e.timeStamp)
-        recordEnd = performance.now()
-        // console.log(recordEnd)
-        // console.timeEnd('Record')
     } else {
         Recording = true
-        // console.log(e.timeStamp)
-        recordStart = performance.now()
-        // console.log(recordStart)
-        // console.time('Record')
     }
-    recordTime = recordEnd - recordStart
-    console.log(`This is the time ${recordTime}`)
 });	
 
 // fetch single category
 function getSingleCategory(obj) {
-
     fetch(categoryURL + `/${obj.dataset.id}`)
         .then(res => res.json())
         .then(category => {
