@@ -12,6 +12,7 @@ const loginForm = document.querySelector(".login-page form")
 const trackForm = document.querySelector(".track-page form")
 const trackList = document.querySelector(".track-list")
 const playPause = document.querySelector(".playPause")
+const editForm = document.querySelector(".edit-page form")
 // const save = document.querySelector(".save")
 
 
@@ -32,10 +33,10 @@ function renderCategory(category) {
     const span2 = document.createElement("span")
     span2.className = "menu-item"
     span2.innerText = category.name
-    li.dataset.id = category.id
-    a.dataset.id = category.id
-    span1.dataset.id = category.id
-    span2.dataset.id = category.id
+    li.dataset.categoryId = category.id
+    a.dataset.categoryId = category.id
+    span1.dataset.categoryId = category.id
+    span2.dataset.categoryId = category.id
     a.append(span1, span2)
     li.append(a)
     sidepanel.append(li)
@@ -45,9 +46,15 @@ function renderCategory(category) {
 function renderTrack(track) {
     const li = document.createElement("li")
     const a = document.createElement("a")
+    const cancel = document.createElement("a")
+    cancel.className = "entypo-cancel"
+    cancel.dataset.id = track.id
     a.className = "entypo-star"
     a.innerText = track.track_name
-    li.append(a)
+    a.dataset.filename = track.filename
+    li.dataset.filename = track.filename
+    li.dataset.trackId = track.id
+    li.append(a, cancel)
     trackList.append(li)
 }
 
@@ -105,6 +112,16 @@ function playAudio(sound) {
     audio.play()
 }
 
+// checking if track exists
+function checkingTrack(name, id) {
+    console.log(JSON.stringify(track))
+    if(!track.length) {
+        alert("Please record a track before you save")
+    } else {
+        createTrack(name, id)
+    }
+}
+
 // function to pause sounds
 // function pauseAudio(sound) {
 
@@ -120,9 +137,7 @@ playPause.addEventListener("click", () => {
     if (!nowPlaying) {
         playPause.innerHTML = "<img src='https://img.icons8.com/android/48/000000/pause.png'/>"
         playPause.id = "nowPlaying"
-        timeouts.push(setTimeout(() => {
-            playTrack(track)
-        }, 0))
+        playTrack(track)
         nowPlaying = true
     } else {
         playPause.id = "paused"
@@ -135,8 +150,18 @@ playPause.addEventListener("click", () => {
     }
 })
 
-//ent listeniner for track plays
-function
+//event listeniner for track plays
+trackList.addEventListener("click", e => {
+    if (e.target.dataset.filename) {
+        console.log(e.target)
+        track = JSON.parse(e.target.dataset.filename) 
+        console.log(track)
+    } else if (e.target.className == "entypo-cancel") {
+        deleteTrack(e.target.dataset.id)
+    }
+    // playTrack(trax)
+})
+
 
 // event listner for key press
 document.addEventListener("keypress", e => {
@@ -155,16 +180,28 @@ document.addEventListener("keypress", e => {
     }
 })
 
+editForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    // console.log(e.target[0].value)
+    editUsername(e.target.dataset.id, e.target[0].value)
+})
+
 // click event for saving sound and time interval into sound array
 boxes.forEach(box => {
     box.addEventListener("click", (e) => {
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
        eventRecord(e.target)
+       box.style.backgroundColor = `#${randomColor}`
+       setTimeout(() => {
+           box.style.backgroundColor = "#444"
+           box.classList.remove("active")
+       }, 250);
     })    
 })
 
 // category on click event
 sidepanel.addEventListener("click", e => {
-    if (e.target.dataset.id) {
+    if (e.target.dataset.categoryId) {
         getSingleCategory(e.target)
     }
 })
@@ -193,7 +230,7 @@ trackForm.addEventListener("submit", (e) => {
 
 // fetch single category
 function getSingleCategory(obj) {
-    fetch(categoryURL + `/${obj.dataset.id}`)
+    fetch(categoryURL + `/${obj.dataset.categoryId}`)
         .then(res => res.json())
         .then(category => {
             category.sounds.forEach((sound, index) => {
@@ -215,6 +252,7 @@ function getSingleUser(id) {
             user.tracks.forEach(renderTrack)
             document.querySelector(".djName").innerText = `Hi, DJ ${user.username}`
             trackForm.dataset.id = user.id
+            editForm.dataset.id = user.id
         })
 }
 
@@ -249,14 +287,34 @@ function getUsers(name) {
         })
 }
 
-// checking if track exists
-function checkingTrack(name, id) {
-    console.log(JSON.stringify(track))
-    if(!track.length) {
-        alert("Please record a track before you save")
-    } else {
-        createTrack(name, id)
+
+//update username
+function editUsername(id, editUserInp){
+    const options = {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            username: editUserInp
+        })
     }
+        fetch(userURL + `/${id}`, options)
+            .then(res => res.json())
+            .then(user => document.querySelector(".djName").innerText = `Hi, DJ ${user.username}`)
+}
+
+// delete track 
+function deleteTrack(id) {
+    const options = {
+        method: "DELETE"
+    }
+    fetch(trackURL + `/${id}`, options)
+        .then(() => {
+            document.querySelector(`li[data-track-id="${id}"]`).remove()
+            // console.log(track)
+        })
 }
 
 // create new track in database
