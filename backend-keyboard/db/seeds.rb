@@ -9,11 +9,13 @@ User.destroy_all
 Sound.destroy_all
 Category.destroy_all
 
-c1 = Category.create(name: "Claps & Kicks")
-c2 = Category.create(name: "FX")
-c3 = Category.create(name: "Percs")
+c1 = Category.create!(name: "Claps & Kicks")
+c2 = Category.create!(name: "FX")
+c3 = Category.create!(name: "Percs")
+c4 = Category.create!(name: "Rick and Morty")
+c5 = Category.create!(name: "Wub")
 
-s1 = Sound.create(sound_name: "Fye Clap", sound: "../backend-keyboard/Media/MC-505/Claps/FyeClap.wav", category: c1)
+s1 = Sound.create!(sound_name: "Fye Clap", sound: "../backend-keyboard/Media/MC-505/Claps/FyeClap.wav", category: c1)
 s2 = Sound.create(sound_name: "Cricket Slap", sound: "../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav", category: c1)
 s3 = Sound.create(sound_name: "Space Clap", sound: "../backend-keyboard/Media/MC-505/Claps/Space20Clap.wav", category: c1)
 s13 = Sound.create(sound_name: "808 Drum", sound: "../backend-keyboard/Media/MC-505/Kicks/808drum.wav", category: c1)
@@ -43,6 +45,28 @@ s9 = Sound.create(sound_name: "Hard Ass FX", sound: "../backend-keyboard/Media/M
 s10 = Sound.create(sound_name: "Noisery", sound: "../backend-keyboard/Media/MC-505/FX/Noisery.wav", category: c2)
 s11 = Sound.create(sound_name: "Rev It Cymbal", sound: "../backend-keyboard/Media/MC-505/FX/Rev'ItCymbal.wav", category: c2)
 s12 = Sound.create(sound_name: "Roboboot", sound: "../backend-keyboard/Media/MC-505/FX/Roboboot1.wav", category: c2)
+
+s28 = Sound.create(sound_name: "Pickle Rick", sound: "../backend-keyboard/Media/RKSounds/I'm Pickle Rick Sound Clip.mp3", category: c4)
+s29 = Sound.create(sound_name: "Wubba Lubba Dub", sound: "../backend-keyboard/Media/RKSounds/WUBBA LUBBA DUB DUB .mp3", category: c4)
+s30 = Sound.create(sound_name: "Rick Waiting", sound: "../backend-keyboard/Media/RKSounds/Rick Random.m4a", category: c4)
+s31 = Sound.create(sound_name: "Portal Gun", sound: "../backend-keyboard/Media/RKSounds/Portal Gun Sound.mp3", category: c4)
+s32 = Sound.create(sound_name: "Poof", sound: "../backend-keyboard/Media/RKSounds/Poof.m4a", category: c4)
+s33 = Sound.create(sound_name: "Show Me", sound: "../backend-keyboard/Media/RKSounds/SHOW ME WHAT YOU GOT.mp3", category: c4)
+s34 = Sound.create(sound_name: "Morty Scream", sound: "../backend-keyboard/Media/RKSounds/Morty Scream.m4a", category: c4)
+s35 = Sound.create(sound_name: "Mr.Meseeks 1", sound: "../backend-keyboard/Media/RKSounds/Im mr Meeseeks.m4a", category: c4)
+s36 = Sound.create(sound_name: "Mr.Meseeks 2", sound: "../backend-keyboard/Media/RKSounds/Mr Meeseeks running at you.m4a", category: c4)
+
+s37 = Sound.create(sound_name: "Dank Master", sound: "../backend-keyboard/Media/Wub/Dank Master.fxp", category: c5)
+s38 = Sound.create(sound_name: "Very Noice", sound: "../backend-keyboard/Media/Wub/VERY NOICE.fxp", category: c5)
+s39 = Sound.create(sound_name: "Timmy", sound: "../backend-keyboard/Media/Wub/Timmy Burner.fxp", category: c5)
+s40 = Sound.create(sound_name: "Lemongrab", sound: "../backend-keyboard/Media/Wub/Lemongrab.fxp", category: c5)
+s41 = Sound.create(sound_name: "Extreme", sound: "../backend-keyboard/Media/Wub/EXTREME HARD LMAO.fxp", category: c5)
+s42 = Sound.create(sound_name: "Mine", sound: "../backend-keyboard/Media/Wub/MineBraft.fxp", category: c5)
+s43 = Sound.create(sound_name: "DSG", sound: "../backend-keyboard/Media/Wub/DSG Bass.fxp", category: c5)
+s44 = Sound.create(sound_name: "REM", sound: "../backend-keyboard/Media/Wub/REM.fxp", category: c5)
+s45 = Sound.create(sound_name: "Sponge", sound: "../backend-keyboard/Media/Wub/SpongeGay.fxp", category: c5)
+
+
 
 u1 = User.create(username:"Bauce")
 u2 = User.create(username:"Lo")

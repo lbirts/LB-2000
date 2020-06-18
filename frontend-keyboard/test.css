@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'DSEG14-Classic';
+    src: url('https://cdn.jsdelivr.net/npm/dseg@0.43.0/fonts/DSEG14-Classic/DSEG14Classic-Regular.woff2') format('woff2'), url('https://cdn.jsdelivr.net/npm/dseg@0.43.0/fonts/DSEG14-Classic/DSEG14Classic-Regular.woff') format('woff'), url('https://cdn.jsdelivr.net/npm/dseg@0.43.0/fonts/DSEG14-Classic/DSEG14Classic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    background-color: #555;
+  }
+  .round-button {
+    cursor: pointer;
+    position: relative;
+    transition-duration: 0.5s;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 2px #161616;
+    border-radius: 50%;
+    background-image: radial-gradient(at 25% bottom, #282828, #161616 50%, grey);
+  }
+  .round-button:after {
+    font-size: 12px;
+    color: #bfbfbf;
+    position: absolute;
+    display: block;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .round-button svg path {
+    fill: grey;
+    transition-duration: 0.5s;
+  }
+  .round-button--on, .round-button:active {
+    box-shadow: 1px 1px 1px 1px #161616;
+  }
+  .round-button--on svg path, .round-button:active svg path {
+    fill: #c4ff82;
+  }
+  .drum-machine-body {
+    font-family: 'Russo One', sans-serif;
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 1em;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin-top: 10vh;
+    transform: translate(-50%, 0);
+  }
+  .drum-machine-body__top {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1em;
+    background-color: #262626;
+  }
+  .drum-machine-body__bottom {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr 2fr;
+  }
+  .drum-machine-body__left-pad {
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    background-color: #262626;
+    padding: 1em;
+    box-shadow: inset 0 0 3px #111;
+    border-radius: 10px;
+  }
+  .volume-display {
+    font-family: 'DSEG14-Classic';
+    padding: 0.5em;
+    background-color: #161616;
+    color: transparent;
+    transition-duration: 1s;
+  }
+  .volume-display--on {
+    color: #fb7c00;
+  }
+  .drum-display {
+    background-color: #bcbcbc;
+    margin-top: 1em;
+    padding: 0 0.5em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    box-shadow: inset 0 0 2px 1px #161616;
+    color: #262626;
+    font-family: 'DSEG14-Classic';
+    transition-duration: 0.5s;
+  }
+  .drum-display--on {
+    background-color: #77abff;
+  }
+  .button-panel {
+    display: flex;
+    padding: 1em 0;
+  }
+  .button-panel div[role="button"] {
+    margin-right: 1em;
+  }
+  .button-panel div[role="button"]:last-child {
+    margin-right: 0;
+  }
+  .power-button:after {
+    content: 'Power';
+  }
+  .power-button.round-button--on {
+    background: radial-gradient(rgba(196, 255, 130, 0.5), transparent 70%);
+  }
+  .vol-plus:after {
+    content: 'Vol+';
+  }
+  .vol-minus:after {
+    content: 'Vol-';
+  }
+  .drum-pad-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 1em;
+    pointer-events: none;
+    border-radius: 10px;
+    background-color: #262626;
+    box-shadow: inset 0 0 3px #111;
+  }
+  .drum-pad-container--on {
+    pointer-events: all;
+  }
+  .drum-pad {
+    position: relative;
+    user-select: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    color: #444;
+    background-color: #282828;
+    border-radius: 50%;
+    padding-top: 100%;
+    background: radial-gradient(#282828, #161616 60%, grey);
+    box-shadow: 3px 3px 1px 3px #161616;
+  }
+  .drum-pad:focus {
+    outline: none;
+  }
+  .drum-pad--active, .drum-pad:active {
+    box-shadow: 1px 1px 1px 3px #161616, inset 0 0 10px 1px #005ef7;
+    border-color: #005ef7;
+    color: #a0c4ff;
+    text-shadow: 0 0 5px #a0c4ff;
+    outline: none;
+  }
+  .drum-pad span {
+    position: absolute;
+    text-shadow: 0 0 2px black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .project-info {
+    font-size: 11px;
+    margin-top: auto;
+    border-radius: 4px;
+    color: #555;
+  }
+  .project-info a {
+    text-decoration: none;
+    color: #555;
+  }
+  .project-info a:hover {
+    color: orange;
+  }
+  
