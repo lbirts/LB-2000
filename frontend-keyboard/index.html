@@ -11,7 +11,6 @@
       <title>SoundBoard</title>
   </head>
   <body>
-
     <!-- Login Modal -->
     <div id="modal" class="loginModal">
       <div class="login-page modalconent">
@@ -51,8 +50,8 @@
       </button>
       <div class="form">
         <form class="track-form">
-          <h3 class="message mt-0 mb-3">Name your Track</h3>
-          <input type="text" id="track_name" placeholder="track name"/>
+          <h3 class="message mt-0 mb-3">Enter a name</h3>
+          <input type="text" id="track_name" placeholder="name"/>
           <button id="submitBtn">Submit</button>
         </form>
       </div>
@@ -65,30 +64,60 @@
     </div>
     <!-- Record Button -->
     <p class="text-white">Click the button to start/stop recording</p>
-    <div class="row">
-      <div class="col-md-3 mt-2 trash"><img src="https://img.icons8.com/android/48/000000/trash.png"/></div>
-      <div class="col-md-4"><button id="recButton"></button></div>
-      <div class="col-md-3 pt-1 mt-2 playPause" id="nowPlaying"><img src="https://img.icons8.com/android/48/000000/play.png"/></div>
-      <div class="save col-md-2 mt-3" data-toggle="modal" data-target="#trackModal"><img src="https://img.icons8.com/office/40/000000/save.png"/></div>
-    </div>
+    
     <!-- Sound Pad  -->
-    <h1>SOUND PAD</h1>
+    <h1>Beat Power</h1>
+    <div id="app">
+      <div>
+          <div id="drum-machine" class="drum-machine-body">
+              <div class="drum-machine-body__top">Beat Power<span style="float: right;">LB2000</span></div>
+              <div class="drum-machine-body__bottom">
+                  <div class="drum-machine-body__left-pad">
+                      <div class="volume-display">Volume: 80 %</div>
+                      <div class="button-panel">
+                          <div role="button" class="power-button mt-2 mr-3 ml-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                  <path d="M256.026 0c-24.816 0-45.004 20.188-45.004 45.004V226.02c0 24.816 20.188 45.004 45.004 45.004s45.004-20.188 45.004-45.004V45.004C301.03 20.188 280.842 0 256.026 0z" fill="grey"></path>
+                                  <path d="M406.625 118.959c-18.939-17.083-46.502-15.14-63.041 1.873-16.632 17.109-17.917 46.086 3.153 65.296 33.44 30.395 50.343 76.459 42.336 122.928-10.868 63.067-65.717 112.767-133.05 112.915-68.971.152-121.809-50.77-132.708-110.617-8.497-46.747 7.179-93.553 41.972-125.197 21.01-19.127 19.913-48.232 3.234-65.36-16.567-17.013-44.295-18.851-63.4-1.56-52.909 47.923-80.527 118.769-72.843 190.58C44.496 423.995 140.9 512 256.553 512c114.326 0 207.934-88.216 222.368-194.743 10.064-74.23-16.964-148.358-72.296-198.298z" fill="grey"></path>
+                              </svg>
+                          </div>
+                          <div class="mt-2 pt-1 vol-plus mr-3"><img src="https://img.icons8.com/android/24/000000/speaker.png"/></div>
+                          <div class="mt-2 pt-1 mr-3 vol-minus"><img src="https://img.icons8.com/metro/26/000000/low-volume.png"/></div>
+                          <div class="mt-2 pt-1 trash mr-2"><img src="https://img.icons8.com/android/24/000000/trash.png"/></div>
+                          <div><button id="recButton"></button></div>
+                          <div class="pt-1 mt-2 mr-2 playPause" id="nowPlaying"><img src="https://img.icons8.com/android/24/000000/play.png"/></div>
+                          <div class="save mt-2 pt-1" data-toggle="modal" data-target="#trackModal"><img src="https://img.icons8.com/office/24/000000/save.png"/></div>
+                      </div>
+                      <div class="drum-display" id="display"></div>
+                      <div class="project-info">
+                          <p>made by Luis Bernal and Lauren Birts</p>
+                      </div>
+                  </div>
+                  <div class="drum-pad-container">
+                    <div class="col-md-12 col-lg-12 pad">
+                      <div class="box green-pad" data-letter="A">A</div>
+                      <div class="box green-pad" data-letter="S">S</div>
+                      <div class="box green-pad" data-letter="D">D</div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 pad">
+                      <div class="box green-pad" data-letter="F">F</div>
+                      <div class="box green-pad" data-letter="G">G</div>
+                      <div class="box green-pad" data-letter="H">H</div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 pad">
+                      <div class="box green-pad" data-letter="J">J</div>
+                      <div class="box green-pad" data-letter="K">K</div>
+                      <div class="box green-pad" data-letter="L">L</div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-    <div class="row pad">
-    <div class="box green-pad">A</div>
-    <div class="box green-pad">S</div>
-    <div class="box green-pad">D</div>
-    </div>
-    <div class="row pad">
-    <div class="box green-pad">F</div>
-    <div class="box green-pad">G</div>
-    <div class="box green-pad">H</div>
-    </div>
-    <div class="row pad">
-    <div class="box green-pad">J</div>
-    <div class="box green-pad">K</div>
-    <div class="box green-pad">L</div>
-    </div>
+  
+
+    
 
     <!-- Side Nav -->
     <div class="side-panel b">
@@ -105,6 +134,16 @@
           <li><a><span class="entypo-note"></span><span class="menu-item">Category 3</span></a></li> -->
         </ul>
     </div>
+
+    <audio data-key="A"></audio>
+    <audio data-key="S"></audio>
+    <audio data-key="D"></audio>
+    <audio data-key="F"></audio>
+    <audio data-key="G"></audio>
+    <audio data-key="H"></audio>
+    <audio data-key="J"></audio>
+    <audio data-key="K"></audio>
+    <audio data-key="L"></audio>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

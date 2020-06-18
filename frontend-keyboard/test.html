@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="test.scss">
+    <script defer rel="stylesheet" src="microphone.js"></script>
+</head>
+<body>
+    <main id="app">
+        <button class="toggle-modal" type="button">
+            <span>?</span>
+        </button>
+        <header>
+            <h1>Record Your Own Soundboard</h1>
+        </header>
+        <div class="record-modal" data-recording="false" title="modal">
+            <div class="modal__bg"></div>
+            <div class="modal__content">
+                <span class="recording-status"></span>
+                <div class="indicator"><span class="light"></span></div>
+                <h2>Record a sound for this letter</h2>
+                <p>hold down the <code>r</code> key</p>
+            </div>
+        </div>
+        <div class="keys-container">
+            <ul class="keys">
+                <li>
+                    <button data-key="a" data-active="false" data-has-sound="" class="beat">
+                        <div class="shadow"></div>
+                        <div class="bg"></div>
+                        <div class="letter">A</div>
+                    </button>
+                </li>
+                <li>
+                    <button data-key="s" data-active="false" data-has-sound="" class="beat">
+                        <div class="shadow"></div>
+                        <div class="bg"></div>
+                        <div class="letter">S</div>
+                    </button>
+                </li>
+                <li>
+                    <button data-key="d" data-active="false" data-has-sound="" class="beat">
+                        <div class="shadow"></div>
+                        <div class="bg"></div>
+                        <div class="letter">D</div>
+                    </button>
+                </li>
+                <li>
+                    <button data-key="f" data-active="false" data-has-sound="" class="beat">
+                        <div class="shadow"></div>
+                        <div class="bg"></div>
+                        <div class="letter">F</div>
+                    </button>
+                </li>
+                <li>
+                    <button data-key="g" data-active="false" data-has-sound="" class="beat">
+                        <div class="shadow"></div>
+                        <div class="bg"></div>
+                        <div class="letter">G</div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <audio data-key="a"></audio>
+    <audio data-key="s"></audio>
+    <audio data-key="d"></audio>
+    <audio data-key="f"></audio>
+    <audio data-key="g"></audio>
+    
+    <div class="help-modal" data-open="false">
+        <div class="container">
+            <div class="bg"></div>
+            <span style="font-size: 28px; position: absolute;top:20px; right: 20px;">&times;</span>
+            <div class="instructions">
+                <h1>How To:</h1>
+                <h2>Record a sound</h2>
+                <p>
+                    To add a sound to a letter, or edit a letter's sound, click one of the
+                    letters below. To record, hold down the <code>r</code> key, on your
+                    keyboard, and release to stop recording.
+                </p>
+                <h2>Play the sound</h2>
+                <p>
+                    To play the sounds tap the corresponding, <code>a</code>,
+                    <code>s</code>,<code>d</code>,<code>f</code>, or <code>g</code> key,
+                    on your keyboard.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

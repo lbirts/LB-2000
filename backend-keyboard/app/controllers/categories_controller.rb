@@ -17,16 +17,16 @@ class CategoriesController < ApplicationController
     }, :except => [:udpated_at, :created_at])
   end
 
-  # # POST /categories
-  # def create
-  #   @category = Category.new(category_params)
+  # POST /categories
+  def create
+    @category = Category.new(category_params)
 
-  #   if @category.save
-  #     render json: @category, status: :created, location: @category
-  #   else
-  #     render json: @category.errors, status: :unprocessable_entity
-  #   end
-  # end
+    if @category.save
+      render json: @category, status: :created, location: @category
+    else
+      render json: @category.errors, status: :unprocessable_entity
+    end
+  end
 
   # # PATCH/PUT /categories/1
   # def update
@@ -48,8 +48,8 @@ class CategoriesController < ApplicationController
       @category = Category.find(params[:id])
     end
 
-    # # Only allow a trusted parameter "white list" through.
-    # def category_params
-    #   params.require(:category).permit(:)
-    # end
+    # Only allow a trusted parameter "white list" through.
+    def category_params
+      params.require(:category).permit(:name)
+    end
 end

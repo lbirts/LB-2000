@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_17_183426) do
+ActiveRecord::Schema.define(version: 2020_06_15_182735) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_06_17_183426) do
 
   create_table "sounds", force: :cascade do |t|
     t.string "sound_name"
-    t.string "sound"
+    t.string "filename"
     t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 2020_06_17_183426) do
 
   create_table "tracks", force: :cascade do |t|
     t.string "filename"
+    t.string "track_name"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "track_name"
     t.index ["user_id"], name: "index_tracks_on_user_id"
   end
 

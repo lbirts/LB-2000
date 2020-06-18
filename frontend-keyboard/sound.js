@@ -1,8 +1,10 @@
+// start of SOUND PAD CODE IGNORE ABOVE, DO not look, advert your eyes lol
 // Global URLs
 const categoryURL = "http://localhost:3000/categories"
 const soundsURL = "http://localhost:3000/sounds"
 const userURL = "http://localhost:3000/users"
 const trackURL = "http://localhost:3000/tracks"
+
 
 // Global elements
 const sidepanel = document.querySelector(".side-panel ul")
@@ -24,6 +26,7 @@ let track = []
 let nowPlaying = false
 let test
 let timeouts = []
+let inCategory = false
 
 // function to render category on page
 function renderCategory(category) {
@@ -72,18 +75,18 @@ function renderSounds(sound, index) {
     const linebr4 = document.createElement("br")
     p.className = "idk"
     p.innerText = sound.sound_name
-    p.dataset.sound = sound.sound
-    box.dataset.sound = sound.sound
+    p.dataset.sound = sound.filename
+    box.dataset.sound = sound.filename
     box.dataset.letter = box.innerText
     box.dataset.id = sound.id
     box.append(p)
 }
 
 // function to play array of sounds with their respective delays
-function playwithDelay(sound, delay) {
+function playwithDelay(obj) {
     let timeO = setTimeout(function() {
-        playAudio(sound)
-    }, delay)
+        playAudio(obj.sound, obj.volume)
+    }, obj.time)
     timeouts.push(timeO)
 }
 
@@ -92,39 +95,38 @@ function playTrack(array) {
     endTime = array[array.length - 1].time + 500
     // endTime = array[-1].time + 500
     array.map(obj => {
-        playwithDelay(obj.sound, obj.time)
+        playwithDelay(obj)
     })
     setTimeout(() => {
         playPause.id = "paused"
-        playPause.innerHTML = "<img src='https://img.icons8.com/android/48/000000/play.png'/>"
+        playPause.innerHTML = "<img src='https://img.icons8.com/android/24/000000/play.png'/>"
         nowPlaying = false
     }, endTime)
-    // playPause.id = "paused"
-    // playPause.innerHTML = "<img src='https://img.icons8.com/android/48/000000/play.png'/>"
-    // nowPlaying = false
 }
 
 // function to cut delay times
 function subtractTimes() {
     track = soundArray.map(obj => {
         delay = obj.time - soundArray[0].time
-        const object = {sound: obj.sound, time: delay}
+        const object = {sound: obj.sound, time: delay, volume: obj.volume}
         return object
     })
 }
 
 // reusable function for recording sounds on click or key press
 function eventRecord(element) {
-    playAudio(element.dataset.sound)
+    playAudio(element.dataset.sound, curVolume / 100)
     if (Recording) {
         boxTime = performance.now()
-        soundArray.push({sound: element.dataset.sound, time: boxTime})
+        soundArray.push({sound: element.dataset.sound, time: boxTime, volume: 0.8})
     } 
 }
 
 // reusable function for playing sounds
-function playAudio(sound) {
+function playAudio(sound, newvolume) {
     const audio = new Audio(sound)
+    console.log(audio)
+    audio.volume = newvolume
     audio.play()
 }
 
@@ -137,31 +139,28 @@ function checkingTrack(name, id) {
     }
 }
 
-// function to pause sounds
-// function pauseAudio(sound) {
-
-// }
-
 // event listener for save
 save.addEventListener("click", () => {
     document.removeEventListener("keypress", keyEvent)
+    document.body.removeEventListener("keyup", playSound);
 })
 
 // event listener for edit
 edit.addEventListener("click", () => {
     document.removeEventListener("keypress", keyEvent)
+    document.body.removeEventListener("keyup", playSound);
 })
 
 // Event listener for play pause utton
 playPause.addEventListener("click", () => {
     if (!nowPlaying) {
         nowPlaying = true
-        playPause.innerHTML = "<img src='https://img.icons8.com/android/48/000000/pause.png'/>"
+        playPause.innerHTML = "<img src='https://img.icons8.com/android/24/000000/pause.png'/>"
         playPause.id = "nowPlaying"
         playTrack(track)
     } else {
         playPause.id = "paused"
-        playPause.innerHTML = "<img src='https://img.icons8.com/android/48/000000/play.png'/>"
+        playPause.innerHTML = "<img src='https://img.icons8.com/android/24/000000/play.png'/>"
         for (let i = 0; i < timeouts.length; i++) {
             clearTimeout(timeouts[i]);
         }
@@ -177,7 +176,6 @@ trackList.addEventListener("click", e => {
     } else if (e.target.className == "entypo-cancel") {
         deleteTrack(e.target.dataset.id)
     }
-    // playTrack(trax)
 })
 
 // event listener for trash
@@ -239,6 +237,8 @@ boxes.forEach(box => {
 sidepanel.addEventListener("click", e => {
     if (e.target.dataset.categoryId) {
         getSingleCategory(e.target)
+        inCategory = true
+        testing()
     }
 })
 
@@ -253,15 +253,34 @@ recordBtn.addEventListener("click", () => {
     }
 });	
 
+// form to submit categories and tracks
 trackForm.addEventListener("submit", (e) => {
     e.preventDefault()
     document.querySelector('#trackModal').style.display = 'none'
     document.querySelector('.modal-backdrop').remove()
-    checkingTrack(e.target[0].value, e.target.dataset.id)
-    track = []
-    soundArray = []
-    e.target.reset()
-    document.addEventListener("keypress", keyEvent)
+    if (!inCategory) {
+        let counter = 0
+        audios.forEach(audio => {
+            let obj
+            if (audio.src === "") {
+                obj = {name: `Sound${++counter}`, file: "no sound"}
+            } else {
+                obj = {name: `Sound${++counter}`, file: audio.src}
+            }
+            audioArray.push(obj)
+        })
+        console.log(audioArray)
+        console.log(e.target[0].value)
+        debugger
+        createCategory(e.target[0].value)
+        e.target.reset()
+    } else {
+        checkingTrack(e.target[0].value, e.target.dataset.id)
+        track = []
+        soundArray = []
+        e.target.reset()
+        document.addEventListener("keypress", keyEvent)
+    }
 })
 
 
@@ -291,6 +310,52 @@ function getSingleUser(id) {
             trackForm.dataset.id = user.id
             editForm.dataset.id = user.id
         })
+}
+
+// create category
+async function createCategory(value) {
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            name: value
+        })
+    }
+    fetch(categoryURL, options)
+        .then(res => res.json())
+        .then(category => {
+            delay = 0
+            audioArray.forEach(sound => {
+                setTimeout(() => {
+                    createSounds(sound, category.id)
+                }, delay)
+                delay += 500
+            })
+            renderCategory(category)
+            audioArray = []
+        })
+}
+
+// create sounds
+function createSounds(sound, categoryId) {
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            sound_name: sound.name,
+            filename: sound.file,
+            category_id: categoryId
+        })
+    }
+    fetch(soundsURL, options)
+        .then(res => res.json())
+        .then(console.log)
 }
 
 // create new user in database
@@ -372,43 +437,206 @@ function createTrack(trackname, userid) {
         .then(track => renderTrack(track))
 }
 
-
 document.querySelector('.login-page form').addEventListener("submit", (e) => {
     e.preventDefault()
     document.querySelector('.loginModal').style.display = "none"
     getUsers(e.target[0].value)
 })
 
+// Record power and display buttons
+let on = false
+document.querySelector(".power-button").addEventListener("click", () => {
+    if (on) {
+        on = false
+        document.querySelector("#display").innerText = ""
+        document.querySelector("#display").classList.remove('drum-display--on')
+        document.querySelector(".volume-display").classList.remove('volume-display--on')
+    } else {
+        on = true
+        document.querySelector("#display").innerText = "Welcome"
+        document.querySelector("#display").classList.add('drum-display--on')
+        document.querySelector(".volume-display").classList.add('volume-display--on')
+    }
+    
+})
 
-// Record Audio
+let curVolume = 80
+document.querySelector(".vol-plus").addEventListener("click", () => {
+    if (curVolume < 100) {
+        updateVolume(++curVolume)
+    }
+})
 
-// navigator.mediaDevices.getUserMedia({ audio: true })
-//   .then(stream => {
-//     const mediaRecorder = new MediaRecorder(stream);
-//     mediaRecorder.start();
+document.querySelector(".vol-minus").addEventListener("click", () => {
+    if (curVolume > 0) {
+        updateVolume(--curVolume)
+    }
+})
 
-//     const audioChunks = [];
-//     mediaRecorder.addEventListener("dataavailable", event => {
-//       audioChunks.push(event.data);
+function updateVolume() {
+    track.forEach(audio => {
+        audio.volume = curVolume / 100
+    })
+    document.querySelector(".volume-display").innerText = `Volume ${curVolume}%`
+}
+
+//   handleVolumeUp() {
+//     if (this.state.volume < 100) {
+//       this.setState({ volume: this.state.volume + 1 });
+//     }
+//     this.updateVolume();
+//   }
+
+//   handleVolumeDown() {
+//     if (this.state.volume > 0) {
+//       this.setState({ volume: this.state.volume - 1 });
+//     }
+//     this.updateVolume();
+//   }
+
+//   updateVolume() {
+//     const audios = document.querySelectorAll('audio');
+//     audios.forEach(audio => {
+//       audio.volume = this.state.volume / 100;
 //     });
+//   }
 
-//     mediaRecorder.addEventListener("stop", () => {
-//         const audioBlob = new Blob(audioChunks);
-//         const audioUrl = URL.createObjectURL(audioBlob);
-//         const audio = new Audio(audioUrl);
-//       audio.play();
-//       });
 
-//     setTimeout(() => {
-//         mediaRecorder.stop();
-//       }, 3000);
-// });
+//  line break for microphone do not go past this line these are stretch goals!!!!!!!!!!!!!
+//  line break for microphone do not go past this line these are stretch goals!!!!!!!!!!!!!
+//  line break for microphone do not go past this line these are stretch goals!!!!!!!!!!!!!
+//  line break for microphone do not go past this line these are stretch goals!!!!!!!!!!!!!
 
-// const start = Date.now();
-// setInterval(function() {
-//     const delta = Date.now() - start; // milliseconds elapsed since start
-//     …
-//     output(Math.floor(delta / 1000)); // in seconds
-//     // alternatively just show wall clock time:
-//     output(new Date().toUTCString());
-// }, 1000);
+let micRecord = false
+const audios = document.querySelectorAll("audio")
+let audioArray = []
+
+function testingAgain(e) {
+    console.log(e.target.innerText)
+    recordBtn.dataset.letter = e.target.innerText
+    e.target.removeEventListener("click", testingAgain)
+}
+
+async function recordSelf(e) {
+    if (micRecord) {
+        micRecord = false
+    } else {
+        micRecord = true
+        console.log("Recording")
+        const activeBtn = document.querySelector(`.box[data-letter="${e.target.dataset.letter}"]`)
+        console.log(activeBtn)
+        const activeLtr = activeBtn.dataset.letter
+        console.log(activeLtr)
+        console.log('heya1')
+        const recorder = await recordAudio(activeLtr)
+        console.log('heya2')
+        recorder.start()
+        console.log('heya3')
+        // stopRecording(recorder)
+        var stopRecording = function(e) {
+            if (e.key === "p") {
+                micRecord = false
+                recordBtn.classList.toggle('Rec')
+                console.log("recording stopped");
+                recorder.stop(); //this triggers the creating the audio el
+            }
+            document.body.removeEventListener("keyup", stopRecording);
+            //document.body.removeEventListener("click", stopRecording);
+        };
+    
+        document.body.addEventListener("keyup", stopRecording);
+    }
+}
+
+function testing() {
+    if (inCategory == false) {
+        boxes.forEach(box => {
+            box.addEventListener("click", testingAgain)
+            box.addEventListener("click", clickSound)
+        })
+        recordBtn.addEventListener("click", recordSelf)
+        document.body.addEventListener("keyup", playSound);
+    } else {
+        boxes.forEach(box => {
+            box.removeEventListener("click", testingAgain)
+        })
+        document.body.removeEventListener("keyup", playSound);
+        document.addEventListener("keypress", keyEvent)
+        recordBtn.removeEventListener("click", recordSelf)
+    }
+}
+
+function clickSound(e) {
+    // console.log(e.target)
+    if (micRecord) return;
+    const key = e.target.dataset.letter;
+    const sound = document.querySelector(`audio[data-key="${key}"]`);
+    if (!sound) return;
+    console.log("playing");
+    sound.currentTime = 0;
+    sound.play();
+}
+
+function playSound(e) {
+    // console.log(e.key)
+    // debugger
+    if (micRecord) return;
+    const key = e.key.toUpperCase();
+    const sound = document.querySelector(`audio[data-key="${key}"]`);
+    if (!sound) return;
+    console.log("playing");
+    sound.currentTime = 0;
+    sound.play();
+}
+
+// record Audio
+function recordAudio(key) {
+	console.log(key);
+	return new Promise(async resolve => {
+		const stream = await navigator.mediaDevices.getUserMedia({
+			audio: true
+		});
+		const mediaRecorder = new MediaRecorder(stream);
+		const audioChunks = [];
+
+		mediaRecorder.addEventListener("dataavailable", event => {
+			audioChunks.push(event.data);
+		});
+		const start = () => {
+			console.log("started");
+			return mediaRecorder.start();
+		};
+
+		const stop = () =>
+			new Promise(resolve => {
+				mediaRecorder.addEventListener("stop", stop);
+				function stop() {
+					const audioBlob = new Blob(audioChunks);
+					const audioUrl = URL.createObjectURL(audioBlob);
+					//creating audio el here
+					console.log({ key });
+					addAudio(audioUrl, key);
+					mediaRecorder.removeEventListener("stop", stop);
+
+					resolve();
+				}
+
+				try {
+					mediaRecorder.stop();
+				} catch (e) {
+					console.log("cant stop wont stop", e);
+				}
+			});
+
+		resolve({ start, stop });
+    });
+}
+
+function addAudio(url, key) {
+	console.log("added audio");
+	const el = document.querySelector(`audio[data-key="${key}"]`);
+	el.playbackRate = 2.0;
+	el.src = url;
+}
+
+testing()
