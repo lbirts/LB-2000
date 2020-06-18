@@ -3,93 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="test.css">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="test.scss">
-    <script defer rel="stylesheet" src="microphone.js"></script>
 </head>
 <body>
-    <main id="app">
-        <button class="toggle-modal" type="button">
-            <span>?</span>
-        </button>
-        <header>
-            <h1>Record Your Own Soundboard</h1>
-        </header>
-        <div class="record-modal" data-recording="false" title="modal">
-            <div class="modal__bg"></div>
-            <div class="modal__content">
-                <span class="recording-status"></span>
-                <div class="indicator"><span class="light"></span></div>
-                <h2>Record a sound for this letter</h2>
-                <p>hold down the <code>r</code> key</p>
+        
+        <div id="app">
+            <div>
+                <div id="drum-machine" class="drum-machine-body">
+                    <div class="drum-machine-body__top">BeatPower<span style="float: right;">DMZ0</span></div>
+                    <div class="drum-machine-body__bottom">
+                        <div class="drum-machine-body__left-pad">
+                            <div class="volume-display">Vol: 80 %</div>
+                            <div class="button-panel">
+                                <div role="button" class="power-button round-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M256.026 0c-24.816 0-45.004 20.188-45.004 45.004V226.02c0 24.816 20.188 45.004 45.004 45.004s45.004-20.188 45.004-45.004V45.004C301.03 20.188 280.842 0 256.026 0z" fill="#933EC5"></path>
+                                        <path d="M406.625 118.959c-18.939-17.083-46.502-15.14-63.041 1.873-16.632 17.109-17.917 46.086 3.153 65.296 33.44 30.395 50.343 76.459 42.336 122.928-10.868 63.067-65.717 112.767-133.05 112.915-68.971.152-121.809-50.77-132.708-110.617-8.497-46.747 7.179-93.553 41.972-125.197 21.01-19.127 19.913-48.232 3.234-65.36-16.567-17.013-44.295-18.851-63.4-1.56-52.909 47.923-80.527 118.769-72.843 190.58C44.496 423.995 140.9 512 256.553 512c114.326 0 207.934-88.216 222.368-194.743 10.064-74.23-16.964-148.358-72.296-198.298z" fill="#933EC5"></path>
+                                    </svg>
+                                </div>
+                                <div role="button" class="vol-minus round-button"></div>
+                                <div role="button" class="vol-plus round-button"></div>
+                            </div>
+                            <div class="drum-display" id="display"></div>
+                            <div class="project-info">
+                                <p>made by <a href="https://codepen.io/askov" target="_blank">Luis Bernal and Lauren Birts</a></p>
+                            </div>
+                        </div>
+                        <div class="drum-pad-container">
+                            <div id="CLHH" role="button" tabindex="-1" class="drum-pad">
+                                <span>Q</span><audio class="clip" src="https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20CLHH.wav?1532352722339" data-name="CLHH" id="Q" preload="true"></audio>
+                            </div>
+                            <div id="SNR D1" role="button" tabindex="-1" class="drum-pad">
+                                <span>W</span><audio class="clip" src="https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20SNR%20D1.wav?1532352722730" data-name="SNR D1" id="W" preload="true"></audio>
+                            </div>
+                            <div id="RIM SHT" role="button" tabindex="-1" class="drum-pad">
+                                <span>E</span><audio class="clip" src="https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20RIM%20SHT.wav?1532352722795" data-name="RIM SHT" id="E" preload="true"></audio>
+                            </div>
+                            <div id="SNR D2" role="button" tabindex="-1" class="drum-pad">
+                                <span>A</span><audio class="clip" src="https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20SNR%20D2.wav?1532352722873" data-name="SNR D2" id="A" preload="true"></audio>
+                            </div>
+                            <div id="RIDE" role="button" tabindex="-1" class="drum-pad">
+                                <span>S</span><audio class="clip" src="https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20RIDE.wav?1532352722922" data-name="RIDE" id="S" preload="true"></audio>
+                            </div>
+                            <div id="TOM1" role="button" tabindex="-1" class="drum-pad">
+                                <span>D</span><audio class="clip" src="https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20TOM1.wav?1532352723451" data-name="TOM1" id="D" preload="true"></audio>
+                            </div>
+                            <div id="TOM2" role="button" tabindex="-1" class="drum-pad">
+                                <span>Z</span><audio class="clip" src="https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20TOM2.wav?1532352723760" data-name="TOM2" id="Z" preload="true"></audio>
+                            </div>
+                            <div id="COWBELL" role="button" tabindex="-1" class="drum-pad">
+                                <span>X</span><audio class="clip" src="https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20COWBELL.wav?1532352724065" data-name="COWBELL" id="X" preload="true"></audio>
+                            </div>
+                            <div id="OPHH" role="button" tabindex="-1" class="drum-pad">
+                                <span>C</span><audio class="clip" src="https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20OPHH.wav?1532352724689" data-name="OPHH" id="C" preload="true"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="keys-container">
-            <ul class="keys">
-                <li>
-                    <button data-key="a" data-active="false" data-has-sound="" class="beat">
-                        <div class="shadow"></div>
-                        <div class="bg"></div>
-                        <div class="letter">A</div>
-                    </button>
-                </li>
-                <li>
-                    <button data-key="s" data-active="false" data-has-sound="" class="beat">
-                        <div class="shadow"></div>
-                        <div class="bg"></div>
-                        <div class="letter">S</div>
-                    </button>
-                </li>
-                <li>
-                    <button data-key="d" data-active="false" data-has-sound="" class="beat">
-                        <div class="shadow"></div>
-                        <div class="bg"></div>
-                        <div class="letter">D</div>
-                    </button>
-                </li>
-                <li>
-                    <button data-key="f" data-active="false" data-has-sound="" class="beat">
-                        <div class="shadow"></div>
-                        <div class="bg"></div>
-                        <div class="letter">F</div>
-                    </button>
-                </li>
-                <li>
-                    <button data-key="g" data-active="false" data-has-sound="" class="beat">
-                        <div class="shadow"></div>
-                        <div class="bg"></div>
-                        <div class="letter">G</div>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </main>
-    <audio data-key="a"></audio>
-    <audio data-key="s"></audio>
-    <audio data-key="d"></audio>
-    <audio data-key="f"></audio>
-    <audio data-key="g"></audio>
-    
-    <div class="help-modal" data-open="false">
-        <div class="container">
-            <div class="bg"></div>
-            <span style="font-size: 28px; position: absolute;top:20px; right: 20px;">&times;</span>
-            <div class="instructions">
-                <h1>How To:</h1>
-                <h2>Record a sound</h2>
-                <p>
-                    To add a sound to a letter, or edit a letter's sound, click one of the
-                    letters below. To record, hold down the <code>r</code> key, on your
-                    keyboard, and release to stop recording.
-                </p>
-                <h2>Play the sound</h2>
-                <p>
-                    To play the sounds tap the corresponding, <code>a</code>,
-                    <code>s</code>,<code>d</code>,<code>f</code>, or <code>g</code> key,
-                    on your keyboard.
-                </p>
-            </div>
-        </div>
-    </div>
+        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.2/umd/react.production.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.2/umd/react-dom.production.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.2/prop-types.min.js"></script>
+        <!-- <script id="rendered-js">
+        /*
+        * Description: Freecodecamp Build a Drum Machine project
+        * Author: Alex Askov
+        * Github: https://github.com/askov/drum-machine
+        */
+        
+        class DrumMachine extends React.Component {
+          constructor() {
+            super();
+            this.playAudio = this.playAudio.bind(this);
+            this.handleKeyDown = this.handleKeyDown.bind(this);
+            this.handleKeyUp = this.handleKeyUp.bind(this);
+            this.updateDisplay = this.updateDisplay.bind(this);
+            this.handlePowerClick = this.handlePowerClick.bind(this);
+            this.activatePad = this.activatePad.bind(this);
+        
+            this.handleVolumeUp = this.handleVolumeUp.bind(this);
+            this.handleVolumeDown = this.handleVolumeDown.bind(this);
+        
+            this.state = {
+              display: '',
+              volume: 80,
+              power: false,
+              kit: [
+              { key: 'Q', active: false, src: 'https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20CLHH.wav?1532352722339', name: 'CLHH' },
+              { key: 'W', active: false, src: 'https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20SNR%20D1.wav?1532352722730', name: 'SNR D1' },
+              { key: 'E', active: false, src: 'https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20RIM%20SHT.wav?1532352722795', name: 'RIM SHT' },
+              { key: 'A', active: false, src: 'https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20SNR%20D2.wav?1532352722873', name: 'SNR D2' },
+              { key: 'S', active: false, src: 'https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20RIDE.wav?1532352722922', name: 'RIDE' },
+              { key: 'D', active: false, src: 'https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20TOM1.wav?1532352723451', name: 'TOM1' },
+              { key: 'Z', active: false, src: 'https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20TOM2.wav?1532352723760', name: 'TOM2' },
+              { key: 'X', active: false, src: 'https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20COWBELL.wav?1532352724065', name: 'COWBELL' },
+              { key: 'C', active: false, src: 'https://cdn.glitch.com/0966cc53-0935-45e4-9edf-7c4fa500e219%2FRX15%20OPHH.wav?1532352724689', name: 'OPHH' }] };
+        
+        
+          }
+          componentDidMount() {
+            document.addEventListener('keydown', this.handleKeyDown);
+            document.addEventListener('keyup', this.handleKeyUp);
+          }
+          componentWillUnmount() {
+            document.removeEventListener('keydown', this.handleKeyDown);
+            document.removeEventListener('keyup', this.handleKeyUp);
+          }
+          playAudio(audio) {
+            audio.pause();
+            audio.currentTime = 0;
+            audio.play();
+            this.updateDisplay(audio.dataset.name);
+          }
+          updateDisplay(text) {
+            this.setState({ display: text });
+          }
+          mapKeyCode(code) {
+            const keymap = {
+              81: 'Q',
+              87: 'W',
+              69: 'E',
+              65: 'A',
+              83: 'S',
+              68: 'D',
+              90: 'Z',
+              88: 'X',
+              67: 'C' };
+        
+            return keymap[code];
+          }
+          handleKeyUp(e) {
+            const x = this.mapKeyCode(e.keyCode);
+            this.deactivatePad(x);
+          }
+          handleKeyDown(e) {
+            if (!this.state.power) return;
+            const x = this.mapKeyCode(e.keyCode);
+            if (!x) return;
+            this.activatePad(x);
+            const audio = document.getElementById(x);
+            if (!audio) return;
+            audio.click();
+          }
+          activatePad(key) {
+            this.setState({
+              kit: this.state.kit.map(el => {
+                return el.key === key ? Object.assign({}, el, { active: true }) : el;
+              }) });
+        
+          }
+          deactivatePad(key) {
+            this.setState({
+              kit: this.state.kit.map(el => {
+                return el.key == key ? Object.assign({}, el, { active: false }) : el;
+              }) });
+        
+          }
+          handlePowerClick() {
+            const text = this.state.power ? '' : 'Welcome';
+            this.setState({ power: !this.state.power });
+            this.setState({ display: text });
+          }
+        
+          handleVolumeUp() {
+            if (this.state.volume < 100) {
+              this.setState({ volume: this.state.volume + 1 });
+            }
+            this.updateVolume();
+          }
+        
+          handleVolumeDown() {
+            if (this.state.volume > 0) {
+              this.setState({ volume: this.state.volume - 1 });
+            }
+            this.updateVolume();
+          }
+        
+          updateVolume() {
+            const audios = document.querySelectorAll('audio');
+            audios.forEach(audio => {
+              audio.volume = this.state.volume / 100;
+            });
+          }
+        
+          render() {
+            return (
+              React.createElement("div", { id: "drum-machine", className: "drum-machine-body" },
+              React.createElement("div", { className: "drum-machine-body__top" }, "BeatPower ", React.createElement("span", { style: { float: 'right' } }, "DMZ0")),
+              React.createElement("div", { className: "drum-machine-body__bottom" },
+              React.createElement("div", { className: "drum-machine-body__left-pad" },
+              React.createElement(VolumeDisplay, {
+                power: this.state.power,
+                volume: this.state.volume }),
+              React.createElement(ButtonPanel, {
+                power: this.state.power,
+                handleVolumeUp: this.handleVolumeUp,
+                handleVolumeDown: this.handleVolumeDown,
+                handlePowerClick: this.handlePowerClick }),
+              React.createElement(Display, {
+                text: this.state.display,
+                power: this.state.power }),
+              React.createElement(DeviceFooter, null)),
+        
+              React.createElement("div", { className: 'drum-pad-container' + (this.state.power ? ' drum-pad-container--on' : '') },
+        
+              this.state.kit.map((pad) =>
+              React.createElement(DrumPad, {
+                key: pad.key,
+                volume: this.state.volume,
+                pad: pad,
+                play: this.playAudio }))))));
+        
+        
+        
+        
+        
+        
+          }}
+        
+        
+        class DrumPad extends React.Component {
+          constructor(props) {
+            super(props);
+            this.audioRef = React.createRef();
+            this.handlePadClick = this.handlePadClick.bind(this);
+          }
+          componentDidMount() {
+            this.audioRef.current.volume = this.props.volume / 100;
+          }
+          handlePadClick() {
+            this.props.play(this.audioRef.current);
+          }
+          render() {
+            return (
+              React.createElement("div", {
+                id: this.props.pad.name,
+                role: "button", tabIndex: "-1",
+                className: 'drum-pad' + (this.props.pad.active ? ' drum-pad--active' : ''),
+                onClick: this.handlePadClick },
+        
+              React.createElement("span", null, this.props.pad.key),
+              React.createElement("audio", {
+                className: "clip",
+                src: this.props.pad.src,
+                "data-name": this.props.pad.name,
+                id: this.props.pad.key,
+                preload: "true",
+                ref: this.audioRef })));
+        
+        
+          }}
+        
+        
+        DrumPad.propTypes = {
+          volume: PropTypes.number.isRequired,
+          pad: PropTypes.object.isRequired,
+          play: PropTypes.func.isRequired };
+        
+        
+        class HoldButton extends React.Component {
+          constructor(props) {
+            super(props);
+            this.handleMouseDown = this.handleMouseDown.bind(this);
+            this.handleMouseUp = this.handleMouseUp.bind(this);
+            this.handleMouseOut = this.handleMouseOut.bind(this);
+          }
+          componentDidMount() {
+            this.interval = null;
+          }
+          componentWillUnmount() {
+            clearInterval(this.interval);
+          }
+          handleMouseDown() {
+            this.interval = setInterval(this.props.handleHold, 50);
+          }
+          handleMouseUp() {
+            clearInterval(this.interval);
+          }
+          handleMouseOut() {
+            clearInterval(this.interval);
+          }
+          render() {
+            return (
+              React.createElement("div", {
+                role: "button",
+                className: this.props.class,
+                onMouseDown: this.handleMouseDown,
+                onMouseUp: this.handleMouseUp,
+                onMouseOut: this.handleMouseOut,
+                onTouchStart: this.handleMouseDown,
+                onTouchEnd: this.handleMouseUp }));
+        
+        
+          }}
+        
+        
+        HoldButton.propTypes = {
+          handleHold: PropTypes.func.isRequired,
+          class: PropTypes.string.isRequired };
+        
+        
+        class VolumeDisplay extends React.Component {
+          constructor(props) {
+            super(props);
+          }
+          render() {
+            return (
+              React.createElement("div", { className: 'volume-display' + (this.props.power ? ' volume-display--on' : '') }, "Vol: ",
+              this.props.volume, " %"));
+        
+        
+          }}
+        
+        
+        VolumeDisplay.propTypes = {
+          power: PropTypes.bool.isRequired,
+          volume: PropTypes.number.isRequired };
+        
+        
+        
+        class PowerButton extends React.Component {
+          constructor(props) {
+            super(props);
+        
+          }
+          render() {
+            return (
+              React.createElement("div", {
+                role: "button",
+                className: this.props.buttonClass,
+                onClick: this.props.handlePowerClick },
+              React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 512 512" }, React.createElement("path", { d: "M256.026 0c-24.816 0-45.004 20.188-45.004 45.004V226.02c0 24.816 20.188 45.004 45.004 45.004s45.004-20.188 45.004-45.004V45.004C301.03 20.188 280.842 0 256.026 0z", fill: "#933EC5" }), React.createElement("path", { d: "M406.625 118.959c-18.939-17.083-46.502-15.14-63.041 1.873-16.632 17.109-17.917 46.086 3.153 65.296 33.44 30.395 50.343 76.459 42.336 122.928-10.868 63.067-65.717 112.767-133.05 112.915-68.971.152-121.809-50.77-132.708-110.617-8.497-46.747 7.179-93.553 41.972-125.197 21.01-19.127 19.913-48.232 3.234-65.36-16.567-17.013-44.295-18.851-63.4-1.56-52.909 47.923-80.527 118.769-72.843 190.58C44.496 423.995 140.9 512 256.553 512c114.326 0 207.934-88.216 222.368-194.743 10.064-74.23-16.964-148.358-72.296-198.298z", fill: "#933EC5" }))));
+        
+        
+          }}
+        
+        
+        PowerButton.propTypes = {
+          buttonClass: PropTypes.string.isRequired,
+          handlePowerClick: PropTypes.func.isRequired };
+        
+        
+        class Display extends React.Component {
+          constructor(props) {
+            super(props);
+          }
+          render() {
+            return (
+              React.createElement("div", { className: 'drum-display' + (this.props.power ? ' drum-display--on' : ''), id: "display" },
+              this.props.text));
+        
+        
+          }}
+        
+        
+        Display.propTypes = {
+          text: PropTypes.string.isRequired,
+          power: PropTypes.bool.isRequired };
+        
+        
+        
+        class ButtonPanel extends React.Component {
+          constructor(props) {
+            super(props);
+          }
+          render() {
+            return (
+              React.createElement("div", { className: "button-panel" },
+              React.createElement(PowerButton, {
+                buttonClass: 'power-button round-button' + (this.props.power ? ' round-button--on' : ''),
+                handlePowerClick: this.props.handlePowerClick }),
+              React.createElement(HoldButton, {
+                handleHold: this.props.handleVolumeDown,
+                class: 'vol-minus round-button' + (this.props.power ? ' round-button--on' : '') }),
+              React.createElement(HoldButton, {
+                handleHold: this.props.handleVolumeUp,
+                class: 'vol-plus round-button' + (this.props.power ? ' round-button--on' : '') })));
+        
+        
+          }}
+        
+        
+        
+        ButtonPanel.propTypes = {
+          handlePowerClick: PropTypes.func.isRequired,
+          handleVolumeUp: PropTypes.func.isRequired,
+          handleVolumeDown: PropTypes.func.isRequired,
+          power: PropTypes.bool.isRequired };
+        
+        
+        const DeviceFooter = () => {
+          return (
+            React.createElement("div", { className: "project-info" },
+            React.createElement("p", null, "Freecodecamp project:"),
+            React.createElement("p", null,
+            React.createElement("a", { href: "https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-drum-machine",
+              target: "_blank" }, "Build a Drum Machine")),
+        
+            React.createElement("p", null, "made by ", React.createElement("a", { href: "https://codepen.io/askov", target: "_blank" }, "Aleks Askov"))));
+        
+        
+        };
+        
+        class App extends React.Component {
+          render() {
+            return (
+              React.createElement("div", null,
+              React.createElement(DrumMachine, null)));
+        
+        
+          }}
+        
+        
+        ReactDOM.render(
+        React.createElement(App, null),
+        document.getElementById('app'));
+        //# sourceURL=pen.js
+            </script> -->
+        
+        
+
 </body>
 </html>
