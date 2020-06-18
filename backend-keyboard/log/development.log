@@ -29651,3 +29651,1522 @@ Processing by UsersController#show as */*
 Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1468)
 
 
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSound Load (2.0ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 28]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 29]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 30]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 31]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 32]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 33]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 34]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 35]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 36]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 37]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 38]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 39]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 40]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 41]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.7ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 42]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 43]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 44]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 45]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 46]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 47]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 48]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 49]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 50]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 51]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 52]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 53]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 54]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 55]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 56]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 57]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 58]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 59]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 60]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 61]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 62]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 63]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 64]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.7ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 65]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 66]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 67]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 68]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 69]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 70]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 71]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 72]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Claps & Kicks"], ["created_at", "2020-06-18 18:26:49.296360"], ["updated_at", "2020-06-18 18:26:49.296360"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "FX"], ["created_at", "2020-06-18 18:26:49.301893"], ["updated_at", "2020-06-18 18:26:49.301893"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Percs"], ["created_at", "2020-06-18 18:26:49.306681"], ["updated_at", "2020-06-18 18:26:49.306681"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Rick and Morty"], ["created_at", "2020-06-18 18:26:49.311021"], ["updated_at", "2020-06-18 18:26:49.311021"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Wub"], ["created_at", "2020-06-18 18:26:49.316284"], ["updated_at", "2020-06-18 18:26:49.316284"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Melody Tings"], ["created_at", "2020-06-18 18:26:49.327552"], ["updated_at", "2020-06-18 18:26:49.327552"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Fye Clap"], ["filename", "../backend-keyboard/Media/MC-505/Claps/FyeClap.wav"], ["category_id", 11], ["created_at", "2020-06-18 18:26:49.337279"], ["updated_at", "2020-06-18 18:26:49.337279"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Cricket Slap"], ["filename", "../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav"], ["category_id", 11], ["created_at", "2020-06-18 18:26:49.343787"], ["updated_at", "2020-06-18 18:26:49.343787"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Space Clap"], ["filename", "../backend-keyboard/Media/MC-505/Claps/Space20Clap.wav"], ["category_id", 11], ["created_at", "2020-06-18 18:26:49.348339"], ["updated_at", "2020-06-18 18:26:49.348339"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "808 Drum"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/808drum.wav"], ["category_id", 11], ["created_at", "2020-06-18 18:26:49.352568"], ["updated_at", "2020-06-18 18:26:49.352568"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Classic 808"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/Classic808.wav"], ["category_id", 11], ["created_at", "2020-06-18 18:26:49.357219"], ["updated_at", "2020-06-18 18:26:49.357219"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Drum Kick"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/DrumKitKick.wav"], ["category_id", 11], ["created_at", "2020-06-18 18:26:49.361444"], ["updated_at", "2020-06-18 18:26:49.361444"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Low Kick"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/LowKick.wav"], ["category_id", 11], ["created_at", "2020-06-18 18:26:49.366154"], ["updated_at", "2020-06-18 18:26:49.366154"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Pumped Up Kick"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/PumpedUpKick.wav"], ["category_id", 11], ["created_at", "2020-06-18 18:26:49.369938"], ["updated_at", "2020-06-18 18:26:49.369938"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "ThumbyKick"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/ThumbyKick1.wav"], ["category_id", 11], ["created_at", "2020-06-18 18:26:49.373887"], ["updated_at", "2020-06-18 18:26:49.373887"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Breakdance Perc"], ["filename", "../backend-keyboard/Media/MC-505/Percs/BreakdancePerc.wav"], ["category_id", 13], ["created_at", "2020-06-18 18:26:49.378193"], ["updated_at", "2020-06-18 18:26:49.378193"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Claves"], ["filename", "../backend-keyboard/Media/MC-505/Percs/Claves.wav"], ["category_id", 13], ["created_at", "2020-06-18 18:26:49.382674"], ["updated_at", "2020-06-18 18:26:49.382674"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Get Low"], ["filename", "../backend-keyboard/Media/MC-505/Percs/Get Low Perc.wav"], ["category_id", 13], ["created_at", "2020-06-18 18:26:49.386661"], ["updated_at", "2020-06-18 18:26:49.386661"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Get Da Bread"], ["filename", "../backend-keyboard/Media/MC-505/Percs/GetDaBread.wav"], ["category_id", 13], ["created_at", "2020-06-18 18:26:49.391596"], ["updated_at", "2020-06-18 18:26:49.391596"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Nice Belly"], ["filename", "../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav"], ["category_id", 13], ["created_at", "2020-06-18 18:26:49.396892"], ["updated_at", "2020-06-18 18:26:49.396892"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Nintendo DS"], ["filename", "../backend-keyboard/Media/MC-505/Percs/NintendoDS.wav"], ["category_id", 13], ["created_at", "2020-06-18 18:26:49.401587"], ["updated_at", "2020-06-18 18:26:49.401587"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Woah Perc"], ["filename", "../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav"], ["category_id", 13], ["created_at", "2020-06-18 18:26:49.418473"], ["updated_at", "2020-06-18 18:26:49.418473"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Shaker"], ["filename", "../backend-keyboard/Media/MC-505/Percs/Shaker1.wav"], ["category_id", 13], ["created_at", "2020-06-18 18:26:49.423947"], ["updated_at", "2020-06-18 18:26:49.423947"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.7ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Nintendo Switch"], ["filename", "../backend-keyboard/Media/MC-505/Percs/NintendoFlavouredSwitch.wav"], ["category_id", 13], ["created_at", "2020-06-18 18:26:49.428891"], ["updated_at", "2020-06-18 18:26:49.428891"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "80s Action"], ["filename", "../backend-keyboard/Media/MC-505/FX/80sAction.wav"], ["category_id", 12], ["created_at", "2020-06-18 18:26:49.434108"], ["updated_at", "2020-06-18 18:26:49.434108"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Alvins Spaceship"], ["filename", "../backend-keyboard/Media/MC-505/FX/AlvinsSpaceship.wav"], ["category_id", 12], ["created_at", "2020-06-18 18:26:49.439207"], ["updated_at", "2020-06-18 18:26:49.439207"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Bad Scratcher"], ["filename", "../backend-keyboard/Media/MC-505/FX/BadScratcher.wav"], ["category_id", 12], ["created_at", "2020-06-18 18:26:49.444969"], ["updated_at", "2020-06-18 18:26:49.444969"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "College Dropout"], ["filename", "../backend-keyboard/Media/MC-505/FX/CollegeDropout.wav"], ["category_id", 12], ["created_at", "2020-06-18 18:26:49.449789"], ["updated_at", "2020-06-18 18:26:49.449789"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Could Be Hard"], ["filename", "../backend-keyboard/Media/MC-505/FX/CouldBeHard.wav"], ["category_id", 12], ["created_at", "2020-06-18 18:26:49.455597"], ["updated_at", "2020-06-18 18:26:49.455597"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Hard Ass FX"], ["filename", "../backend-keyboard/Media/MC-505/FX/HardAssFX.wav"], ["category_id", 12], ["created_at", "2020-06-18 18:26:49.461614"], ["updated_at", "2020-06-18 18:26:49.461614"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Noisery"], ["filename", "../backend-keyboard/Media/MC-505/FX/Noisery.wav"], ["category_id", 12], ["created_at", "2020-06-18 18:26:49.467611"], ["updated_at", "2020-06-18 18:26:49.467611"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Rev It Cymbal"], ["filename", "../backend-keyboard/Media/MC-505/FX/Rev'ItCymbal.wav"], ["category_id", 12], ["created_at", "2020-06-18 18:26:49.472758"], ["updated_at", "2020-06-18 18:26:49.472758"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Roboboot"], ["filename", "../backend-keyboard/Media/MC-505/FX/Roboboot1.wav"], ["category_id", 12], ["created_at", "2020-06-18 18:26:49.477893"], ["updated_at", "2020-06-18 18:26:49.477893"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Pickle Rick"], ["filename", "../backend-keyboard/Media/RKSounds/I'm Pickle Rick Sound Clip.mp3"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.482604"], ["updated_at", "2020-06-18 18:26:49.482604"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Wubba Lubba Dub"], ["filename", "../backend-keyboard/Media/RKSounds/WUBBA LUBBA DUB DUB .mp3"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.487495"], ["updated_at", "2020-06-18 18:26:49.487495"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Rick Waiting"], ["filename", "../backend-keyboard/Media/RKSounds/Rick Random.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.492954"], ["updated_at", "2020-06-18 18:26:49.492954"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Portal Gun"], ["filename", "../backend-keyboard/Media/RKSounds/Portal Gun Sound.mp3"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.498998"], ["updated_at", "2020-06-18 18:26:49.498998"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Poof"], ["filename", "../backend-keyboard/Media/RKSounds/Poof.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.504320"], ["updated_at", "2020-06-18 18:26:49.504320"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Show Me"], ["filename", "../backend-keyboard/Media/RKSounds/SHOW ME WHAT YOU GOT.mp3"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.509552"], ["updated_at", "2020-06-18 18:26:49.509552"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Morty Scream"], ["filename", "../backend-keyboard/Media/RKSounds/Morty Scream.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.514884"], ["updated_at", "2020-06-18 18:26:49.514884"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.7ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Mr.Meseeks 1"], ["filename", "../backend-keyboard/Media/RKSounds/Im mr Meeseeks.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.520161"], ["updated_at", "2020-06-18 18:26:49.520161"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Mr.Meseeks 2"], ["filename", "../backend-keyboard/Media/RKSounds/Mr Meeseeks running at you.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.525764"], ["updated_at", "2020-06-18 18:26:49.525764"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Int"], ["filename", "../backend-keyboard/Media/Skrillex/Intro.m4a"], ["category_id", 15], ["created_at", "2020-06-18 18:26:49.531133"], ["updated_at", "2020-06-18 18:26:49.531133"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "DADAD"], ["filename", "../backend-keyboard/Media/Skrillex/dada.m4a"], ["category_id", 15], ["created_at", "2020-06-18 18:26:49.536394"], ["updated_at", "2020-06-18 18:26:49.536394"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "DONDO"], ["filename", "../backend-keyboard/Media/Skrillex/DONDON.m4a"], ["category_id", 15], ["created_at", "2020-06-18 18:26:49.541794"], ["updated_at", "2020-06-18 18:26:49.541794"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "UHUHUH"], ["filename", "../backend-keyboard/Media/Skrillex/Uh.m4a"], ["category_id", 15], ["created_at", "2020-06-18 18:26:49.547121"], ["updated_at", "2020-06-18 18:26:49.547121"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "WEUH"], ["filename", "../backend-keyboard/Media/Skrillex/Weuh.m4a"], ["category_id", 15], ["created_at", "2020-06-18 18:26:49.551951"], ["updated_at", "2020-06-18 18:26:49.551951"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "YEAH"], ["filename", "../backend-keyboard/Media/Skrillex/Yea.m4a"], ["category_id", 15], ["created_at", "2020-06-18 18:26:49.556968"], ["updated_at", "2020-06-18 18:26:49.556968"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Fight"], ["filename", "../backend-keyboard/Media/Skrillex/Fight.m4a"], ["category_id", 15], ["created_at", "2020-06-18 18:26:49.561445"], ["updated_at", "2020-06-18 18:26:49.561445"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Victory"], ["filename", "../backend-keyboard/Media/Skrillex/VIctory.m4a"], ["category_id", 15], ["created_at", "2020-06-18 18:26:49.566624"], ["updated_at", "2020-06-18 18:26:49.566624"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Bluub"], ["filename", "../backend-keyboard/Media/Skrillex/Bluub.m4a"], ["category_id", 15], ["created_at", "2020-06-18 18:26:49.583039"], ["updated_at", "2020-06-18 18:26:49.583039"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Ting"], ["filename", "../backend-keyboard/Media/MelodyTings/Ting.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.588049"], ["updated_at", "2020-06-18 18:26:49.588049"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Snap"], ["filename", "../backend-keyboard/Media/MelodyTings/Snap.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.593334"], ["updated_at", "2020-06-18 18:26:49.593334"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Malt"], ["filename", "../backend-keyboard/Media/MelodyTings/Malt.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.598512"], ["updated_at", "2020-06-18 18:26:49.598512"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Deep"], ["filename", "../backend-keyboard/Media/MelodyTings/Deep.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.602792"], ["updated_at", "2020-06-18 18:26:49.602792"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Knock"], ["filename", "../backend-keyboard/Media/MelodyTings/Knock.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.607498"], ["updated_at", "2020-06-18 18:26:49.607498"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Hihat Closed"], ["filename", "../backend-keyboard/Media/MelodyTings/HihatClosed.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.612601"], ["updated_at", "2020-06-18 18:26:49.612601"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Blip"], ["filename", "../backend-keyboard/Media/MelodyTings/Blip.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.617975"], ["updated_at", "2020-06-18 18:26:49.617975"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Tom"], ["filename", "../backend-keyboard/Media/MelodyTings/Tom.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.622819"], ["updated_at", "2020-06-18 18:26:49.622819"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Melody"], ["filename", "../backend-keyboard/Media/MelodyTings/Melody.m4a"], ["category_id", 14], ["created_at", "2020-06-18 18:26:49.627840"], ["updated_at", "2020-06-18 18:26:49.627840"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Bauce"], ["created_at", "2020-06-18 18:26:49.633326"], ["updated_at", "2020-06-18 18:26:49.633326"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Lo"], ["created_at", "2020-06-18 18:26:49.637461"], ["updated_at", "2020-06-18 18:26:49.637461"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "JazziJax"], ["created_at", "2020-06-18 18:26:49.642815"], ["updated_at", "2020-06-18 18:26:49.642815"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Keauli"], ["created_at", "2020-06-18 18:26:49.647727"], ["updated_at", "2020-06-18 18:26:49.647727"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Rianu Keeves"], ["created_at", "2020-06-18 18:26:49.652553"], ["updated_at", "2020-06-18 18:26:49.652553"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Nhuck Chorris"], ["created_at", "2020-06-18 18:26:49.657115"], ["updated_at", "2020-06-18 18:26:49.657115"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Prison Mike"], ["created_at", "2020-06-18 18:26:49.661843"], ["updated_at", "2020-06-18 18:26:49.661843"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/categories" for ::1 at 2020-06-18 13:27:11 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 11]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 12]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 13]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 14]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 15]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 102ms (Views: 13.5ms | ActiveRecord: 3.7ms | Allocations: 23838)
+
+
+Started GET "/users" for ::1 at 2020-06-18 13:27:16 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 11384)
+
+
+Started GET "/users/9" for ::1 at 2020-06-18 13:27:16 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `set_user'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1603)
+
+
+Started GET "/categories/11" for ::1 at 2020-06-18 13:27:18 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 11]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2688)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:27:24 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1501)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:27:26 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1501)
+
+
+Started GET "/categories" for ::1 at 2020-06-18 13:27:29 -0500
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 11]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 12]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 13]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 14]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 15]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 12550)
+
+
+Started GET "/users" for ::1 at 2020-06-18 13:27:31 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 6959)
+
+
+Started GET "/users/9" for ::1 at 2020-06-18 13:27:31 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `set_user'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1468)
+
+
+Started GET "/categories/15" for ::1 at 2020-06-18 13:27:32 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 15]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2549)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:27:40 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1485)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:27:42 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1485)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:27:48 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1485)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:27:51 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1485)
+
+
+Started GET "/categories/15" for ::1 at 2020-06-18 13:27:55 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 15]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2549)
+
+
+Started GET "/categories/14" for ::1 at 2020-06-18 13:27:57 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 14]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3611)
+
+
+Started GET "/categories/13" for ::1 at 2020-06-18 13:28:07 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 13]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2549)
+
+
+Started GET "/categories/12" for ::1 at 2020-06-18 13:28:10 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 12]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2549)
+
+
+Started GET "/categories/11" for ::1 at 2020-06-18 13:28:12 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 11]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2555)
+
+
+Started GET "/categories/13" for ::1 at 2020-06-18 13:28:14 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 13]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2549)
+
+
+Started GET "/categories/14" for ::1 at 2020-06-18 13:28:15 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 14]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3611)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:28:21 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1485)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:28:22 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1486)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:28:23 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1488)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:28:24 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1485)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:28:24 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1485)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:28:25 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1485)
+
+
+Started GET "/categories/16" for ::1 at 2020-06-18 13:28:25 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 16]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1485)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 14]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSound Load (1.6ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 73]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 74]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 75]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 76]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 77]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 78]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 79]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 80]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 81]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 82]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 83]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 84]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 85]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 86]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 87]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 88]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 89]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 90]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 91]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 92]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.7ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 93]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 94]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 95]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 96]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 97]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 98]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 99]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 100]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 101]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 102]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 103]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 104]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 105]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 106]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 107]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 108]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 109]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 110]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 111]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 112]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 113]]
+  [1m[35m (19.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 114]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 115]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 116]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 117]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 118]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 119]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 120]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 121]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 122]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 123]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 124]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.4ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 125]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sounds" WHERE "sounds"."id" = ?[0m  [["id", 126]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 16]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Claps & Kicks"], ["created_at", "2020-06-18 18:30:21.202092"], ["updated_at", "2020-06-18 18:30:21.202092"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "FX"], ["created_at", "2020-06-18 18:30:21.207622"], ["updated_at", "2020-06-18 18:30:21.207622"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Percs"], ["created_at", "2020-06-18 18:30:21.212617"], ["updated_at", "2020-06-18 18:30:21.212617"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Rick and Morty"], ["created_at", "2020-06-18 18:30:21.217696"], ["updated_at", "2020-06-18 18:30:21.217696"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Wub"], ["created_at", "2020-06-18 18:30:21.222449"], ["updated_at", "2020-06-18 18:30:21.222449"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Melody Tings"], ["created_at", "2020-06-18 18:30:21.227429"], ["updated_at", "2020-06-18 18:30:21.227429"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Fye Clap"], ["filename", "../backend-keyboard/Media/MC-505/Claps/FyeClap.wav"], ["category_id", 17], ["created_at", "2020-06-18 18:30:21.234154"], ["updated_at", "2020-06-18 18:30:21.234154"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Cricket Slap"], ["filename", "../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav"], ["category_id", 17], ["created_at", "2020-06-18 18:30:21.239767"], ["updated_at", "2020-06-18 18:30:21.239767"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Space Clap"], ["filename", "../backend-keyboard/Media/MC-505/Claps/Space20Clap.wav"], ["category_id", 17], ["created_at", "2020-06-18 18:30:21.244503"], ["updated_at", "2020-06-18 18:30:21.244503"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "808 Drum"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/808drum.wav"], ["category_id", 17], ["created_at", "2020-06-18 18:30:21.249331"], ["updated_at", "2020-06-18 18:30:21.249331"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Classic 808"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/Classic808.wav"], ["category_id", 17], ["created_at", "2020-06-18 18:30:21.254113"], ["updated_at", "2020-06-18 18:30:21.254113"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Drum Kick"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/DrumKitKick.wav"], ["category_id", 17], ["created_at", "2020-06-18 18:30:21.271900"], ["updated_at", "2020-06-18 18:30:21.271900"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Low Kick"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/LowKick.wav"], ["category_id", 17], ["created_at", "2020-06-18 18:30:21.276851"], ["updated_at", "2020-06-18 18:30:21.276851"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Pumped Up Kick"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/PumpedUpKick.wav"], ["category_id", 17], ["created_at", "2020-06-18 18:30:21.282118"], ["updated_at", "2020-06-18 18:30:21.282118"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "ThumbyKick"], ["filename", "../backend-keyboard/Media/MC-505/Kicks/ThumbyKick1.wav"], ["category_id", 17], ["created_at", "2020-06-18 18:30:21.287661"], ["updated_at", "2020-06-18 18:30:21.287661"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Breakdance Perc"], ["filename", "../backend-keyboard/Media/MC-505/Percs/BreakdancePerc.wav"], ["category_id", 19], ["created_at", "2020-06-18 18:30:21.292488"], ["updated_at", "2020-06-18 18:30:21.292488"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Claves"], ["filename", "../backend-keyboard/Media/MC-505/Percs/Claves.wav"], ["category_id", 19], ["created_at", "2020-06-18 18:30:21.296736"], ["updated_at", "2020-06-18 18:30:21.296736"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Get Low"], ["filename", "../backend-keyboard/Media/MC-505/Percs/Get Low Perc.wav"], ["category_id", 19], ["created_at", "2020-06-18 18:30:21.301237"], ["updated_at", "2020-06-18 18:30:21.301237"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Get Da Bread"], ["filename", "../backend-keyboard/Media/MC-505/Percs/GetDaBread.wav"], ["category_id", 19], ["created_at", "2020-06-18 18:30:21.305625"], ["updated_at", "2020-06-18 18:30:21.305625"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Nice Belly"], ["filename", "../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav"], ["category_id", 19], ["created_at", "2020-06-18 18:30:21.310100"], ["updated_at", "2020-06-18 18:30:21.310100"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Nintendo DS"], ["filename", "../backend-keyboard/Media/MC-505/Percs/NintendoDS.wav"], ["category_id", 19], ["created_at", "2020-06-18 18:30:21.315104"], ["updated_at", "2020-06-18 18:30:21.315104"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Woah Perc"], ["filename", "../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav"], ["category_id", 19], ["created_at", "2020-06-18 18:30:21.320312"], ["updated_at", "2020-06-18 18:30:21.320312"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Shaker"], ["filename", "../backend-keyboard/Media/MC-505/Percs/Shaker1.wav"], ["category_id", 19], ["created_at", "2020-06-18 18:30:21.324963"], ["updated_at", "2020-06-18 18:30:21.324963"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Nintendo Switch"], ["filename", "../backend-keyboard/Media/MC-505/Percs/NintendoFlavouredSwitch.wav"], ["category_id", 19], ["created_at", "2020-06-18 18:30:21.330230"], ["updated_at", "2020-06-18 18:30:21.330230"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.7ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "80s Action"], ["filename", "../backend-keyboard/Media/MC-505/FX/80sAction.wav"], ["category_id", 18], ["created_at", "2020-06-18 18:30:21.335415"], ["updated_at", "2020-06-18 18:30:21.335415"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Alvins Spaceship"], ["filename", "../backend-keyboard/Media/MC-505/FX/AlvinsSpaceship.wav"], ["category_id", 18], ["created_at", "2020-06-18 18:30:21.341972"], ["updated_at", "2020-06-18 18:30:21.341972"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Bad Scratcher"], ["filename", "../backend-keyboard/Media/MC-505/FX/BadScratcher.wav"], ["category_id", 18], ["created_at", "2020-06-18 18:30:21.346958"], ["updated_at", "2020-06-18 18:30:21.346958"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "College Dropout"], ["filename", "../backend-keyboard/Media/MC-505/FX/CollegeDropout.wav"], ["category_id", 18], ["created_at", "2020-06-18 18:30:21.351897"], ["updated_at", "2020-06-18 18:30:21.351897"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Could Be Hard"], ["filename", "../backend-keyboard/Media/MC-505/FX/CouldBeHard.wav"], ["category_id", 18], ["created_at", "2020-06-18 18:30:21.356549"], ["updated_at", "2020-06-18 18:30:21.356549"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.3ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Hard Ass FX"], ["filename", "../backend-keyboard/Media/MC-505/FX/HardAssFX.wav"], ["category_id", 18], ["created_at", "2020-06-18 18:30:21.360709"], ["updated_at", "2020-06-18 18:30:21.360709"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Noisery"], ["filename", "../backend-keyboard/Media/MC-505/FX/Noisery.wav"], ["category_id", 18], ["created_at", "2020-06-18 18:30:21.365276"], ["updated_at", "2020-06-18 18:30:21.365276"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Rev It Cymbal"], ["filename", "../backend-keyboard/Media/MC-505/FX/Rev'ItCymbal.wav"], ["category_id", 18], ["created_at", "2020-06-18 18:30:21.370005"], ["updated_at", "2020-06-18 18:30:21.370005"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Roboboot"], ["filename", "../backend-keyboard/Media/MC-505/FX/Roboboot1.wav"], ["category_id", 18], ["created_at", "2020-06-18 18:30:21.375055"], ["updated_at", "2020-06-18 18:30:21.375055"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Pickle Rick"], ["filename", "../backend-keyboard/Media/RKSounds/I'm Pickle Rick Sound Clip.mp3"], ["category_id", 20], ["created_at", "2020-06-18 18:30:21.380295"], ["updated_at", "2020-06-18 18:30:21.380295"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Wubba Lubba Dub"], ["filename", "../backend-keyboard/Media/RKSounds/WUBBA LUBBA DUB DUB .mp3"], ["category_id", 20], ["created_at", "2020-06-18 18:30:21.385262"], ["updated_at", "2020-06-18 18:30:21.385262"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Rick Waiting"], ["filename", "../backend-keyboard/Media/RKSounds/Rick Random.m4a"], ["category_id", 20], ["created_at", "2020-06-18 18:30:21.390210"], ["updated_at", "2020-06-18 18:30:21.390210"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Portal Gun"], ["filename", "../backend-keyboard/Media/RKSounds/Portal Gun Sound.mp3"], ["category_id", 20], ["created_at", "2020-06-18 18:30:21.394652"], ["updated_at", "2020-06-18 18:30:21.394652"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Poof"], ["filename", "../backend-keyboard/Media/RKSounds/Poof.m4a"], ["category_id", 20], ["created_at", "2020-06-18 18:30:21.399393"], ["updated_at", "2020-06-18 18:30:21.399393"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Show Me"], ["filename", "../backend-keyboard/Media/RKSounds/SHOW ME WHAT YOU GOT.mp3"], ["category_id", 20], ["created_at", "2020-06-18 18:30:21.404884"], ["updated_at", "2020-06-18 18:30:21.404884"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.7ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Morty Scream"], ["filename", "../backend-keyboard/Media/RKSounds/Morty Scream.m4a"], ["category_id", 20], ["created_at", "2020-06-18 18:30:21.409613"], ["updated_at", "2020-06-18 18:30:21.409613"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Mr.Meseeks 1"], ["filename", "../backend-keyboard/Media/RKSounds/Im mr Meeseeks.m4a"], ["category_id", 20], ["created_at", "2020-06-18 18:30:21.415307"], ["updated_at", "2020-06-18 18:30:21.415307"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Mr.Meseeks 2"], ["filename", "../backend-keyboard/Media/RKSounds/Mr Meeseeks running at you.m4a"], ["category_id", 20], ["created_at", "2020-06-18 18:30:21.421382"], ["updated_at", "2020-06-18 18:30:21.421382"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Int"], ["filename", "../backend-keyboard/Media/Skrillex/Intro.m4a"], ["category_id", 21], ["created_at", "2020-06-18 18:30:21.439821"], ["updated_at", "2020-06-18 18:30:21.439821"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "DADAD"], ["filename", "../backend-keyboard/Media/Skrillex/dada.m4a"], ["category_id", 21], ["created_at", "2020-06-18 18:30:21.446341"], ["updated_at", "2020-06-18 18:30:21.446341"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "DONDO"], ["filename", "../backend-keyboard/Media/Skrillex/DONDON.m4a"], ["category_id", 21], ["created_at", "2020-06-18 18:30:21.451926"], ["updated_at", "2020-06-18 18:30:21.451926"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "UHUHUH"], ["filename", "../backend-keyboard/Media/Skrillex/Uh.m4a"], ["category_id", 21], ["created_at", "2020-06-18 18:30:21.458527"], ["updated_at", "2020-06-18 18:30:21.458527"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "WEUH"], ["filename", "../backend-keyboard/Media/Skrillex/Weuh.m4a"], ["category_id", 21], ["created_at", "2020-06-18 18:30:21.464459"], ["updated_at", "2020-06-18 18:30:21.464459"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "YEAH"], ["filename", "../backend-keyboard/Media/Skrillex/Yea.m4a"], ["category_id", 21], ["created_at", "2020-06-18 18:30:21.471522"], ["updated_at", "2020-06-18 18:30:21.471522"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Fight"], ["filename", "../backend-keyboard/Media/Skrillex/Fight.m4a"], ["category_id", 21], ["created_at", "2020-06-18 18:30:21.479145"], ["updated_at", "2020-06-18 18:30:21.479145"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Victory"], ["filename", "../backend-keyboard/Media/Skrillex/VIctory.m4a"], ["category_id", 21], ["created_at", "2020-06-18 18:30:21.485918"], ["updated_at", "2020-06-18 18:30:21.485918"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Bluub"], ["filename", "../backend-keyboard/Media/Skrillex/Bluub.m4a"], ["category_id", 21], ["created_at", "2020-06-18 18:30:21.492103"], ["updated_at", "2020-06-18 18:30:21.492103"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.8ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Ting"], ["filename", "../backend-keyboard/Media/MelodyTings/Ting.m4a"], ["category_id", 22], ["created_at", "2020-06-18 18:30:21.498830"], ["updated_at", "2020-06-18 18:30:21.498830"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Snap"], ["filename", "../backend-keyboard/Media/MelodyTings/Snap.m4a"], ["category_id", 22], ["created_at", "2020-06-18 18:30:21.505334"], ["updated_at", "2020-06-18 18:30:21.505334"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.5ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Malt"], ["filename", "../backend-keyboard/Media/MelodyTings/Malt.m4a"], ["category_id", 22], ["created_at", "2020-06-18 18:30:21.510671"], ["updated_at", "2020-06-18 18:30:21.510671"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Deep"], ["filename", "../backend-keyboard/Media/MelodyTings/Deep.m4a"], ["category_id", 22], ["created_at", "2020-06-18 18:30:21.517489"], ["updated_at", "2020-06-18 18:30:21.517489"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.6ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Knock"], ["filename", "../backend-keyboard/Media/MelodyTings/Knock.m4a"], ["category_id", 22], ["created_at", "2020-06-18 18:30:21.522319"], ["updated_at", "2020-06-18 18:30:21.522319"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Hihat Closed"], ["filename", "../backend-keyboard/Media/MelodyTings/HihatClosed.m4a"], ["category_id", 22], ["created_at", "2020-06-18 18:30:21.527568"], ["updated_at", "2020-06-18 18:30:21.527568"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Blip"], ["filename", "../backend-keyboard/Media/MelodyTings/Blip.m4a"], ["category_id", 22], ["created_at", "2020-06-18 18:30:21.532327"], ["updated_at", "2020-06-18 18:30:21.532327"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Tom"], ["filename", "../backend-keyboard/Media/MelodyTings/Tom.m4a"], ["category_id", 22], ["created_at", "2020-06-18 18:30:21.539632"], ["updated_at", "2020-06-18 18:30:21.539632"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSound Create (0.4ms)[0m  [1m[32mINSERT INTO "sounds" ("sound_name", "filename", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sound_name", "Melody"], ["filename", "../backend-keyboard/Media/MelodyTings/Melody.m4a"], ["category_id", 22], ["created_at", "2020-06-18 18:30:21.545278"], ["updated_at", "2020-06-18 18:30:21.545278"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Bauce"], ["created_at", "2020-06-18 18:30:21.550472"], ["updated_at", "2020-06-18 18:30:21.550472"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Lo"], ["created_at", "2020-06-18 18:30:21.557904"], ["updated_at", "2020-06-18 18:30:21.557904"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "JazziJax"], ["created_at", "2020-06-18 18:30:21.565170"], ["updated_at", "2020-06-18 18:30:21.565170"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Keauli"], ["created_at", "2020-06-18 18:30:21.572584"], ["updated_at", "2020-06-18 18:30:21.572584"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Rianu Keeves"], ["created_at", "2020-06-18 18:30:21.579340"], ["updated_at", "2020-06-18 18:30:21.579340"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Nhuck Chorris"], ["created_at", "2020-06-18 18:30:21.586112"], ["updated_at", "2020-06-18 18:30:21.586112"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Prison Mike"], ["created_at", "2020-06-18 18:30:21.592894"], ["updated_at", "2020-06-18 18:30:21.592894"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/categories" for ::1 at 2020-06-18 13:30:40 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 17]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 18]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 19]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 20]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 21]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.1ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 22]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 101ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 23863)
+
+
+Started GET "/users" for ::1 at 2020-06-18 13:30:44 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 18]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 21]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 11351)
+
+
+Started GET "/users/16" for ::1 at 2020-06-18 13:30:44 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `set_user'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1603)
+
+
+Started GET "/categories/22" for ::1 at 2020-06-18 13:30:45 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"22"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 22]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2682)
+
+
+Started GET "/categories" for ::1 at 2020-06-18 13:30:53 -0500
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 17]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 18]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 19]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 20]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 21]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 22]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 12570)
+
+
+Started GET "/users" for ::1 at 2020-06-18 13:30:55 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 18]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 21]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 6977)
+
+
+Started GET "/users/16" for ::1 at 2020-06-18 13:30:55 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `set_user'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1468)
+
+
+Started GET "/categories/21" for ::1 at 2020-06-18 13:30:57 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 21]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2549)
+
+
+Started GET "/categories/21" for ::1 at 2020-06-18 13:31:00 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 21]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2549)
+
+
+Started GET "/categories/20" for ::1 at 2020-06-18 13:31:02 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 20]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2549)
+
+
+Started GET "/categories" for ::1 at 2020-06-18 13:36:33 -0500
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 17]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 18]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 19]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 20]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 21]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 22]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 12553)
+
+
+Started GET "/users" for ::1 at 2020-06-18 13:36:36 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 18]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 21]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 6961)
+
+
+Started GET "/users/16" for ::1 at 2020-06-18 13:36:37 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `set_user'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1468)
+
+
+Started GET "/categories/17" for ::1 at 2020-06-18 13:36:42 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 17]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2555)
+
+
+Started POST "/tracks" for ::1 at 2020-06-18 13:36:59 -0500
+Processing by TracksController#create as JSON
+  Parameters: {"track_name"=>"FYAAA", "filename"=>"[{\"sound\":\"../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav\",\"time\":0,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav\",\"time\":215.7850000075996,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Claps/Space20Clap.wav\",\"time\":639.5799999590963,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":1135.424999985844,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/LowKick.wav\",\"time\":1851.729999994859,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/LowKick.wav\",\"time\":2082.745000021532,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":2611.685000010766,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/LowKick.wav\",\"time\":3505.7550000492483,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":4233.660000027157,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":4521.24500006903,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/808drum.wav\",\"time\":4993.430000031367,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":5824.770000064746,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":6040.415000054054,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/808drum.wav\",\"time\":6423.945000045933,\"volume\":0.8}]", "user_id"=>"16", "track"=>{"filename"=>"[{\"sound\":\"../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav\",\"time\":0,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav\",\"time\":215.7850000075996,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Claps/Space20Clap.wav\",\"time\":639.5799999590963,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":1135.424999985844,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/LowKick.wav\",\"time\":1851.729999994859,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/LowKick.wav\",\"time\":2082.745000021532,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":2611.685000010766,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/LowKick.wav\",\"time\":3505.7550000492483,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":4233.660000027157,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":4521.24500006903,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/808drum.wav\",\"time\":4993.430000031367,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":5824.770000064746,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":6040.415000054054,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/808drum.wav\",\"time\":6423.945000045933,\"volume\":0.8}]", "track_name"=>"FYAAA", "user_id"=>"16"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+  [1m[36mTrack Create (0.9ms)[0m  [1m[32mINSERT INTO "tracks" ("filename", "track_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["filename", "[{\"sound\":\"../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav\",\"time\":0,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav\",\"time\":215.7850000075996,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Claps/Space20Clap.wav\",\"time\":639.5799999590963,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":1135.424999985844,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/LowKick.wav\",\"time\":1851.729999994859,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/LowKick.wav\",\"time\":2082.745000021532,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":2611.685000010766,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/LowKick.wav\",\"time\":3505.7550000492483,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":4233.660000027157,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":4521.24500006903,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/808drum.wav\",\"time\":4993.430000031367,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":5824.770000064746,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/Classic808.wav\",\"time\":6040.415000054054,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Kicks/808drum.wav\",\"time\":6423.945000045933,\"volume\":0.8}]"], ["track_name", "FYAAA"], ["user_id", 16], ["created_at", "2020-06-18 18:36:59.565658"], ["updated_at", "2020-06-18 18:36:59.565658"]]
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+Completed 201 Created in 17ms (Views: 0.8ms | ActiveRecord: 3.0ms | Allocations: 7959)
+
+
+Started GET "/categories/19" for ::1 at 2020-06-18 13:37:24 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"19"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 19]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2549)
+
+
+Started POST "/tracks" for ::1 at 2020-06-18 13:37:49 -0500
+Processing by TracksController#create as JSON
+  Parameters: {"track_name"=>"NewIsh", "filename"=>"[{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Claves.wav\",\"time\":0,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Claves.wav\",\"time\":431.70999991707504,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":1179.72999997437,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":1491.1849999334663,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Claves.wav\",\"time\":2010.5849999235943,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":2594.3649999098852,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Shaker1.wav\",\"time\":3418.070000014268,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Shaker1.wav\",\"time\":3673.8299999851733,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":4073.8199999323115,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Shaker1.wav\",\"time\":4577.124999952503,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":5128.849999979138,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":5824.2199999513105,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":6080.049999989569,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":6583.519999985583,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":7087.654999922961,\"volume\":0.8}]", "user_id"=>"16", "track"=>{"filename"=>"[{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Claves.wav\",\"time\":0,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Claves.wav\",\"time\":431.70999991707504,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":1179.72999997437,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":1491.1849999334663,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Claves.wav\",\"time\":2010.5849999235943,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":2594.3649999098852,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Shaker1.wav\",\"time\":3418.070000014268,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Shaker1.wav\",\"time\":3673.8299999851733,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":4073.8199999323115,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Shaker1.wav\",\"time\":4577.124999952503,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":5128.849999979138,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":5824.2199999513105,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":6080.049999989569,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":6583.519999985583,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":7087.654999922961,\"volume\":0.8}]", "track_name"=>"NewIsh", "user_id"=>"16"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+  [1m[36mTrack Create (0.6ms)[0m  [1m[32mINSERT INTO "tracks" ("filename", "track_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["filename", "[{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Claves.wav\",\"time\":0,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Claves.wav\",\"time\":431.70999991707504,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":1179.72999997437,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":1491.1849999334663,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Claves.wav\",\"time\":2010.5849999235943,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":2594.3649999098852,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Shaker1.wav\",\"time\":3418.070000014268,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Shaker1.wav\",\"time\":3673.8299999851733,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":4073.8199999323115,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/Shaker1.wav\",\"time\":4577.124999952503,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":5128.849999979138,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":5824.2199999513105,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":6080.049999989569,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/NiceBelly.wav\",\"time\":6583.519999985583,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/MC-505/Percs/WoahPerc.wav\",\"time\":7087.654999922961,\"volume\":0.8}]"], ["track_name", "NewIsh"], ["user_id", 16], ["created_at", "2020-06-18 18:37:49.374728"], ["updated_at", "2020-06-18 18:37:49.374728"]]
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+Completed 201 Created in 9ms (Views: 0.9ms | ActiveRecord: 2.2ms | Allocations: 3724)
+
+
+Started GET "/categories" for ::1 at 2020-06-18 13:38:17 -0500
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 17]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 18]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 19]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 20]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 21]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 22]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 0.5ms | ActiveRecord: 3.6ms | Allocations: 12552)
+
+
+Started GET "/users" for ::1 at 2020-06-18 13:38:19 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 18]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 21]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 7203)
+
+
+Started POST "/users" for ::1 at 2020-06-18 13:38:19 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", ""], ["created_at", "2020-06-18 18:38:19.283692"], ["updated_at", "2020-06-18 18:38:19.283692"]]
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 1.5ms | Allocations: 2593)
+
+
+Started GET "/users/22" for ::1 at 2020-06-18 13:38:19 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `set_user'
+  [1m[36mTrack Load (0.1ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 22]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1468)
+
+
+Started GET "/categories" for ::1 at 2020-06-18 13:38:21 -0500
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 17]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 18]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 19]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 20]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 21]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mSound Load (0.3ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 22]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 12553)
+
+
+Started GET "/users" for ::1 at 2020-06-18 13:38:22 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 15]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 18]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 20]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 21]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 22]]
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 8094)
+
+
+Started GET "/users/16" for ::1 at 2020-06-18 13:38:22 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `set_user'
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1704)
+
+
+Started GET "/categories/20" for ::1 at 2020-06-18 13:38:31 -0500
+Processing by CategoriesController#show as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48:in `set_category'
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."category_id" = ?[0m  [["category_id", 20]]
+  ↳ app/controllers/categories_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2549)
+
+
+Started POST "/tracks" for ::1 at 2020-06-18 13:38:43 -0500
+Processing by TracksController#create as JSON
+  Parameters: {"track_name"=>"test", "filename"=>"[{\"sound\":\"../backend-keyboard/Media/RKSounds/WUBBA LUBBA DUB DUB .mp3\",\"time\":0,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/RKSounds/Portal Gun Sound.mp3\",\"time\":1064.0849999617785,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/RKSounds/Poof.m4a\",\"time\":2310.8899999642745,\"volume\":0.8}]", "user_id"=>"16", "track"=>{"filename"=>"[{\"sound\":\"../backend-keyboard/Media/RKSounds/WUBBA LUBBA DUB DUB .mp3\",\"time\":0,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/RKSounds/Portal Gun Sound.mp3\",\"time\":1064.0849999617785,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/RKSounds/Poof.m4a\",\"time\":2310.8899999642745,\"volume\":0.8}]", "track_name"=>"test", "user_id"=>"16"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+  [1m[36mTrack Create (0.9ms)[0m  [1m[32mINSERT INTO "tracks" ("filename", "track_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["filename", "[{\"sound\":\"../backend-keyboard/Media/RKSounds/WUBBA LUBBA DUB DUB .mp3\",\"time\":0,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/RKSounds/Portal Gun Sound.mp3\",\"time\":1064.0849999617785,\"volume\":0.8},{\"sound\":\"../backend-keyboard/Media/RKSounds/Poof.m4a\",\"time\":2310.8899999642745,\"volume\":0.8}]"], ["track_name", "test"], ["user_id", 16], ["created_at", "2020-06-18 18:38:43.357490"], ["updated_at", "2020-06-18 18:38:43.357490"]]
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tracks_controller.rb:25:in `create'
+Completed 201 Created in 9ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 3721)
+
+
+Started DELETE "/tracks/3" for ::1 at 2020-06-18 13:38:46 -0500
+Processing by TracksController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" WHERE "tracks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tracks_controller.rb:49:in `set_track'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tracks_controller.rb:43:in `destroy'
+  [1m[36mTrack Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tracks" WHERE "tracks"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/tracks_controller.rb:43:in `destroy'
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tracks_controller.rb:43:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 3.2ms | Allocations: 2541)
+
+
+Started PATCH "/users/16" for ::1 at 2020-06-18 13:39:10 -0500
+Processing by UsersController#update as JSON
+  Parameters: {"username"=>"LoLo", "id"=>"16", "user"=>{"username"=>"LoLo"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `set_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "LoLo"], ["updated_at", "2020-06-18 18:39:10.783076"], ["id", 16]]
+  ↳ app/controllers/users_controller.rb:32:in `update'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:32:in `update'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 3116)
+
+

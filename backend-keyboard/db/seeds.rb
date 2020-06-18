@@ -14,7 +14,7 @@ c2 = Category.create!(name: "FX")
 c3 = Category.create!(name: "Percs")
 c4 = Category.create!(name: "Rick and Morty")
 c5 = Category.create!(name: "Wub")
-# c6 = Category.create!(name: "Melody Tings")
+c6 = Category.create!(name: "Melody Tings")
 
 
 s1 = Sound.create(sound_name: "Fye Clap", filename: "../backend-keyboard/Media/MC-505/Claps/FyeClap.wav", category: c1)
@@ -68,15 +68,15 @@ s43 = Sound.create(sound_name: "Fight", filename: "../backend-keyboard/Media/Skr
 s44 = Sound.create(sound_name: "Victory", filename: "../backend-keyboard/Media/Skrillex/VIctory.m4a", category: c5)
 s45 = Sound.create(sound_name: "Bluub", filename: "../backend-keyboard/Media/Skrillex/Bluub.m4a", category: c5)
 
-# s46 = Sound.create(sound_name: "Ting", filename: "../backend-keyboard/Media/RKSounds/I'm Pickle Rick Sound Clip.mp3", category: c4)
-# s47 = Sound.create(sound_name: "Snap", filename: "../backend-keyboard/Media/RKSounds/WUBBA LUBBA DUB DUB .mp3", category: c4)
-# s48 = Sound.create(sound_name: "Rick Waiting", filename: "../backend-keyboard/Media/RKSounds/Rick Random.m4a", category: c4)
-# s49 = Sound.create(sound_name: "Portal Gun", filename: "../backend-keyboard/Media/RKSounds/Portal Gun Sound.mp3", category: c4)
-# s50 = Sound.create(sound_name: "Poof", filename: "../backend-keyboard/Media/RKSounds/Poof.m4a", category: c4)
-# s51 = Sound.create(sound_name: "Show Me", filename: "../backend-keyboard/Media/RKSounds/SHOW ME WHAT YOU GOT.mp3", category: c4)
-# s52 = Sound.create(sound_name: "Morty Scream", filename: "../backend-keyboard/Media/RKSounds/Morty Scream.m4a", category: c4)
-# s53 = Sound.create(sound_name: "Mr.Meseeks 1", filename: "../backend-keyboard/Media/RKSounds/Im mr Meeseeks.m4a", category: c4)
-# s54 = Sound.create(sound_name: "Mr.Meseeks 2", filename: "../backend-keyboard/Media/RKSounds/Mr Meeseeks running at you.m4a", category: c4)
+s46 = Sound.create(sound_name: "Ting", filename: "../backend-keyboard/Media/MelodyTings/Ting.m4a", category: c6)
+s47 = Sound.create(sound_name: "Snap", filename: "../backend-keyboard/Media/MelodyTings/Snap.m4a", category: c6)
+s48 = Sound.create(sound_name: "Malt", filename: "../backend-keyboard/Media/MelodyTings/Malt.m4a", category: c6)
+s49 = Sound.create(sound_name: "Deep", filename: "../backend-keyboard/Media/MelodyTings/Deep.m4a", category: c6)
+s50 = Sound.create(sound_name: "Knock", filename: "../backend-keyboard/Media/MelodyTings/Knock.m4a", category: c6)
+s51 = Sound.create(sound_name: "Hihat Closed", filename: "../backend-keyboard/Media/MelodyTings/HihatClosed.m4a", category: c6)
+s52 = Sound.create(sound_name: "Blip", filename: "../backend-keyboard/Media/MelodyTings/Blip.m4a", category: c6)
+s53 = Sound.create(sound_name: "Tom", filename: "../backend-keyboard/Media/MelodyTings/Tom.m4a", category: c6)
+s54 = Sound.create(sound_name: "Melody", filename: "../backend-keyboard/Media/MelodyTings/Melody.m4a", category: c6)
 
 
 u1 = User.create(username:"Bauce")
