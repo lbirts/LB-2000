@@ -36,7 +36,7 @@
   padding-bottom: 13px;
 }
 .side-panel > ul ul {
-  width: 150px;
+  width: 170px;
   padding-left: 10px;
   display: none;
   position: absolute;
@@ -215,6 +215,16 @@ h2 {
   color: #fff;
   letter-spacing: 2px;
 }
+.edit {
+  position: absolute;
+  margin-left: 380px;
+  top: 100px;
+  color: #fff;
+  cursor: pointer;
+}
+.save, .playPause, .trash {
+  cursor: pointer;
+}
 h1 {
   color: #fff;
   font-size: 5vw;
@@ -233,11 +243,23 @@ h1 {
   box-shadow: 0 8px 6px -6px black;
   background-color: #444;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.4);
   user-select: none;
+}
+.idk {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+.close {
+  position: absolute;
+  left: 825px;
+  z-index: 1000;
+  margin-top: 4px;
 }
 .box:hover {
   background-color: #5e5e5e;
@@ -254,6 +276,7 @@ h1 {
 }
 .green-pad {
   border: 2px solid #2ecc71;
+  /* border-color: purple; */
 }
 .red-pad {
   border: 2px solid #e5446d;

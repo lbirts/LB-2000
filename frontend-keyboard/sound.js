@@ -13,7 +13,8 @@ const trackForm = document.querySelector(".track-page form")
 const trackList = document.querySelector(".track-list")
 const playPause = document.querySelector(".playPause")
 const editForm = document.querySelector(".edit-page form")
-// const save = document.querySelector(".save")
+const save = document.querySelector(".save")
+const edit = document.querySelector(".edit")
 
 
 // Global Variables
@@ -65,6 +66,11 @@ function renderSounds(sound, index) {
         box.querySelector("p").remove()
     }
     const p = document.createElement("p")
+    const linebr = document.createElement("br")
+    const linebr2 = document.createElement("br")
+    const linebr3 = document.createElement("br")
+    const linebr4 = document.createElement("br")
+    p.className = "idk"
     p.innerText = sound.sound_name
     p.dataset.sound = sound.sound
     box.dataset.sound = sound.sound
@@ -83,9 +89,19 @@ function playwithDelay(sound, delay) {
 
 // function to play track (array of sounds)
 function playTrack(array) {
+    endTime = array[array.length - 1].time + 500
+    // endTime = array[-1].time + 500
     array.map(obj => {
         playwithDelay(obj.sound, obj.time)
     })
+    setTimeout(() => {
+        playPause.id = "paused"
+        playPause.innerHTML = "<img src='https://img.icons8.com/android/48/000000/play.png'/>"
+        nowPlaying = false
+    }, endTime)
+    // playPause.id = "paused"
+    // playPause.innerHTML = "<img src='https://img.icons8.com/android/48/000000/play.png'/>"
+    // nowPlaying = false
 }
 
 // function to cut delay times
@@ -114,7 +130,6 @@ function playAudio(sound) {
 
 // checking if track exists
 function checkingTrack(name, id) {
-    console.log(JSON.stringify(track))
     if(!track.length) {
         alert("Please record a track before you save")
     } else {
@@ -127,18 +142,23 @@ function checkingTrack(name, id) {
 
 // }
 
-// // event listener for save
-// save.addEventListener("click", () => {
-//     document.querySelector('#trackModal').style.display = 'block'
-// })
+// event listener for save
+save.addEventListener("click", () => {
+    document.removeEventListener("keypress", keyEvent)
+})
+
+// event listener for edit
+edit.addEventListener("click", () => {
+    document.removeEventListener("keypress", keyEvent)
+})
 
 // Event listener for play pause utton
 playPause.addEventListener("click", () => {
     if (!nowPlaying) {
+        nowPlaying = true
         playPause.innerHTML = "<img src='https://img.icons8.com/android/48/000000/pause.png'/>"
         playPause.id = "nowPlaying"
         playTrack(track)
-        nowPlaying = true
     } else {
         playPause.id = "paused"
         playPause.innerHTML = "<img src='https://img.icons8.com/android/48/000000/play.png'/>"
@@ -153,24 +173,31 @@ playPause.addEventListener("click", () => {
 //event listeniner for track plays
 trackList.addEventListener("click", e => {
     if (e.target.dataset.filename) {
-        console.log(e.target)
         track = JSON.parse(e.target.dataset.filename) 
-        console.log(track)
     } else if (e.target.className == "entypo-cancel") {
         deleteTrack(e.target.dataset.id)
     }
     // playTrack(trax)
 })
 
+// event listener for trash
+document.querySelector(".trash").addEventListener("click", () => {
+    soundArray = []
+    track = []
+})
 
 // event listner for key press
-document.addEventListener("keypress", e => {
+document.addEventListener("keypress", keyEvent)
+
+
+function keyEvent(e) {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     for (let i = 0; i < boxes.length; i++) {
         let box = boxes[i]
         if (box.dataset.letter.toLowerCase() == e.key) {
             eventRecord(box)
             box.style.backgroundColor = `#${randomColor}`
+            box.style.borderColor = `#${randomColor}`
             box.classList.add("active")
             setTimeout(() => {
                 box.style.backgroundColor = "#444"
@@ -178,13 +205,20 @@ document.addEventListener("keypress", e => {
             }, 250);
         }
     }
-})
+}
 
 editForm.addEventListener("submit", (e) => {
     e.preventDefault()
-    // console.log(e.target[0].value)
+    document.querySelector('#editModal').style.display = 'none'
+    document.querySelector('.modal-backdrop').remove()
     editUsername(e.target.dataset.id, e.target[0].value)
+    e.target.reset()
+    document.addEventListener("keypress", keyEvent)
 })
+
+document.querySelectorAll(".close").forEach(el => el.addEventListener("click", () => {
+    document.addEventListener("keypress", keyEvent)
+}))
 
 // click event for saving sound and time interval into sound array
 boxes.forEach(box => {
@@ -192,7 +226,9 @@ boxes.forEach(box => {
         const randomColor = Math.floor(Math.random()*16777215).toString(16);
        eventRecord(e.target)
        box.style.backgroundColor = `#${randomColor}`
+       box.style.borderColor = `#${randomColor}`
        setTimeout(() => {
+        //    box.style.borderColor = "#2ecc71"
            box.style.backgroundColor = "#444"
            box.classList.remove("active")
        }, 250);
@@ -225,6 +261,7 @@ trackForm.addEventListener("submit", (e) => {
     track = []
     soundArray = []
     e.target.reset()
+    document.addEventListener("keypress", keyEvent)
 })
 
 
@@ -313,7 +350,6 @@ function deleteTrack(id) {
     fetch(trackURL + `/${id}`, options)
         .then(() => {
             document.querySelector(`li[data-track-id="${id}"]`).remove()
-            // console.log(track)
         })
 }
 
