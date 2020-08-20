@@ -451,11 +451,13 @@ document.querySelector(".power-button").addEventListener("click", () => {
         document.querySelector("#display").innerText = ""
         document.querySelector("#display").classList.remove('drum-display--on')
         document.querySelector(".volume-display").classList.remove('volume-display--on')
+        document.querySelector(".power-button svg").setAttribute("fill", "grey")
     } else {
         on = true
         document.querySelector("#display").innerText = "Welcome"
         document.querySelector("#display").classList.add('drum-display--on')
         document.querySelector(".volume-display").classList.add('volume-display--on')
+        document.querySelector(".power-button svg").setAttribute("fill", "green")
     }
     
 })

@@ -199,8 +199,8 @@
 
 /* Sound Pad */
 html, body {
-  /* background: linear-gradient(to left, #fd746c, #ff9068); */
-  background: url("../DJ\ .jpg");
+  background: linear-gradient(to left, #fd746c, #ff9068);
+  /* background: url("../DJ\ .jpg"); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
