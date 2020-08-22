@@ -1,9 +1,9 @@
 // start of SOUND PAD CODE IGNORE ABOVE, DO not look, advert your eyes lol
 // Global URLs
-const categoryURL = "http://localhost:3000/categories"
-const soundsURL = "http://localhost:3000/sounds"
-const userURL = "http://localhost:3000/users"
-const trackURL = "http://localhost:3000/tracks"
+const categoryURL = "https://fierce-wildwood-65072.herokuapp.com/categories"
+const soundsURL = "https://fierce-wildwood-65072.herokuapp.com/sounds"
+const userURL = "https://fierce-wildwood-65072.herokuapp.com/users"
+const trackURL = "https://fierce-wildwood-65072.herokuapp.com/tracks"
 
 
 // Global elements
