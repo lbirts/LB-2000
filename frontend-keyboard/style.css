@@ -235,6 +235,7 @@ h1 {
   color: white;
   font-size: 5vw;
   letter-spacing: 6px;
+  padding-bottom: 10px;
 }
 .pad {
   width: 350px;
@@ -392,10 +393,11 @@ body {
   background-color: rgb(57, 57, 57);
   border-radius: 10px;
   padding: 1em;
+  padding-top: 0;
   display: inline-block;
   position: relative;
   left: 50%;
-  margin-top: 10vh;
+  margin-top: 2vh;
   transform: translate(-50%, 0);
 }
 .drum-machine-body__top {
@@ -517,4 +519,22 @@ body {
 }
 .project-info a:hover {
   color: orange;
+}
+
+.instructions {
+  width: 80%;
+  /* margin-bottom: 50px; */
+}
+
+.clear {
+  border: 0;
+  background-color: red;
+  height: 50px;
+  width: 150px;
+  color: white;
+  border-radius: 6px;
+}
+
+@media (max-width: 1295px) {
+  
 }

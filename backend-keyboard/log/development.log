@@ -31191,3 +31191,101 @@ Processing by CategoriesController#index as */*
 Completed 200 OK in 110ms (Views: 0.4ms | ActiveRecord: 4.9ms | Allocations: 28191)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mCategory Destroy (1.8ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 23]]
+Started GET "/" for ::1 at 2020-08-22 11:53:27 -0500
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/lbirts/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lbirts/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.2ms | Allocations: 480)
+Completed 200 OK in 29ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 2633)
+
+
+Started GET "/sounds" for ::1 at 2020-08-22 11:53:32 -0500
+Processing by SoundsController#index as HTML
+  [1m[36mSound Load (2.7ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/sounds_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 33.6ms | ActiveRecord: 4.1ms | Allocations: 14116)
+
+
+Started GET "/sounds/filename" for ::1 at 2020-08-22 11:54:08 -0500
+Processing by SoundsController#show as HTML
+  Parameters: {"id"=>"filename"}
+  [1m[36mSound Load (0.5ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sounds_controller.rb:44:in `set_sound'
+Completed 404 Not Found in 21ms (ActiveRecord: 0.5ms | Allocations: 2418)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Sound with 'id'=filename):
+  
+app/controllers/sounds_controller.rb:44:in `set_sound'
+Started GET "/sounds/1" for ::1 at 2020-08-22 11:54:11 -0500
+Processing by SoundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/sounds_controller.rb:44:in `set_sound'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 652)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Sound with 'id'=1):
+  
+app/controllers/sounds_controller.rb:44:in `set_sound'
+Started GET "/sounds/" for ::1 at 2020-08-22 11:54:17 -0500
+Processing by SoundsController#index as HTML
+  [1m[36mSound Load (0.4ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds"[0m
+  ↳ app/controllers/sounds_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.4ms | Allocations: 8701)
+
+
+Started GET "/sounds/127" for ::1 at 2020-08-22 11:54:21 -0500
+Processing by SoundsController#show as HTML
+  Parameters: {"id"=>"127"}
+  [1m[36mSound Load (0.2ms)[0m  [1m[34mSELECT "sounds".* FROM "sounds" WHERE "sounds"."id" = ? LIMIT ?[0m  [["id", 127], ["LIMIT", 1]]
+  ↳ app/controllers/sounds_controller.rb:44:in `set_sound'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/sounds_controller.rb:13:in `show'
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 1.1ms | Allocations: 6847)
+
+
+Started GET "/backend-keyboard/Media" for ::1 at 2020-08-22 11:54:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/backend-keyboard/Media"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'

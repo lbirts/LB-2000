@@ -17,6 +17,8 @@ const playPause = document.querySelector(".playPause")
 const editForm = document.querySelector(".edit-page form")
 const save = document.querySelector(".save")
 const edit = document.querySelector(".edit")
+const clear = document.querySelector(".clear")
+const instruct = document.querySelector(".instructions")
 
 
 // Global Variables
@@ -29,6 +31,43 @@ let timeouts = []
 let inCategory = false
 
 // function to render category on page
+
+function instructions() {
+    if (on) {
+        if (inCategory === false) {
+            console.log("cat",inCategory)
+            console.log("on", on)
+            clear.style.display = "none"
+            instruct.innerText = "Want to record your own sounds? Click the a letter on the machine and hit record button and grab something around you (or use your mouth) to make some cool sounds. Once you are done click the record button to hear your sound play back. If you don't like the sound click the letter and record your sund again. Fill the entire board up with unique sounds by click another letter and recording a sound. Hear your sounds by click their respective letters. Once you have filled up the board click the save button to save your sound board so others can use your cool sounds."
+        } else {
+            console.log("cat", inCategory)
+            console.log("on", on)
+            clear.style.display = "block"
+            instruct.innerText = "Play around with the sounds to get a feel of the machine. Once you are ready to start recording, click the record button to start/stop your recording. Once you are done click the play button to hear your track back. If you are satisfied with your track click the save button to save your track to your profile otherwise click the trash button. Want to record your own sounds? Hit 'Clear Machine'."
+        }
+    } else {
+        instruct.innerText = ""
+        clear.style.display = "none"
+    }
+}
+
+clear.addEventListener("click", clearMachine)
+
+function clearMachine() {
+    inCategory = false
+    for (let i = 0; i < boxes.length; i++) {
+        let box = boxes[i]
+        if (box.querySelector("p")) {
+            box.querySelector("p").remove()
+        }
+    }
+    console.log("cat", inCategory)
+    console.log("on", on)
+
+    instructions()
+
+}
+
 function renderCategory(category) {
     const li = document.createElement("li")
     const a = document.createElement("a")
@@ -124,7 +163,10 @@ function eventRecord(element) {
 
 // reusable function for playing sounds
 function playAudio(sound, newvolume) {
+    
     const audio = new Audio(sound)
+    audio.crossorigin = "anonymous"
+    debugger
     console.log(audio)
     audio.volume = newvolume
     audio.play()
@@ -139,11 +181,10 @@ function checkingTrack(name, id) {
     }
 }
 
-// event listener for save
-save.addEventListener("click", () => {
+function saveFun() {
     document.removeEventListener("keypress", keyEvent)
     document.body.removeEventListener("keyup", playSound);
-})
+}
 
 // event listener for edit
 edit.addEventListener("click", () => {
@@ -151,8 +192,7 @@ edit.addEventListener("click", () => {
     document.body.removeEventListener("keyup", playSound);
 })
 
-// Event listener for play pause utton
-playPause.addEventListener("click", () => {
+function togglePlay() {
     if (!nowPlaying) {
         nowPlaying = true
         playPause.innerHTML = "<img src='https://img.icons8.com/android/24/000000/pause.png'/>"
@@ -167,7 +207,7 @@ playPause.addEventListener("click", () => {
         timeouts = []
         nowPlaying = false
     }
-})
+}
 
 //event listeniner for track plays
 trackList.addEventListener("click", e => {
@@ -178,15 +218,10 @@ trackList.addEventListener("click", e => {
     }
 })
 
-// event listener for trash
-document.querySelector(".trash").addEventListener("click", () => {
+function trash() {
     soundArray = []
     track = []
-})
-
-// event listner for key press
-document.addEventListener("keypress", keyEvent)
-
+}
 
 function keyEvent(e) {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -218,32 +253,31 @@ document.querySelectorAll(".close").forEach(el => el.addEventListener("click", (
     document.addEventListener("keypress", keyEvent)
 }))
 
-// click event for saving sound and time interval into sound array
-boxes.forEach(box => {
-    box.addEventListener("click", (e) => {
-        const randomColor = Math.floor(Math.random()*16777215).toString(16);
-       eventRecord(e.target)
-       box.style.backgroundColor = `#${randomColor}`
-       box.style.borderColor = `#${randomColor}`
-       setTimeout(() => {
-        //    box.style.borderColor = "#2ecc71"
-           box.style.backgroundColor = "#444"
-           box.classList.remove("active")
-       }, 250);
-    })    
-})
+function colorAndPlay(e) {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    eventRecord(e.target)
+    this.style.backgroundColor = `#${randomColor}`
+    this.style.borderColor = `#${randomColor}`
+    setTimeout(() => {
+    //    box.style.borderColor = "#2ecc71"
+        this.style.backgroundColor = "#444"
+        this.classList.remove("active")
+    }, 250);
+}
 
 // category on click event
 sidepanel.addEventListener("click", e => {
     if (e.target.dataset.categoryId) {
         getSingleCategory(e.target)
         inCategory = true
+        console.log("cat", inCategory)
+        console.log("on", on)
         testing()
+        instructions()
     }
 })
 
-// Record button animation / recording 
-recordBtn.addEventListener("click", () => {
+function recordAni() {
     recordBtn.classList.toggle('Rec')
     if (Recording) {
         Recording = false
@@ -251,7 +285,7 @@ recordBtn.addEventListener("click", () => {
     } else {
         Recording = true
     }
-});	
+}
 
 // form to submit categories and tracks
 trackForm.addEventListener("submit", (e) => {
@@ -263,7 +297,7 @@ trackForm.addEventListener("submit", (e) => {
         audios.forEach(audio => {
             let obj
             if (audio.src === "") {
-                obj = {name: `Sound${++counter}`, file: "no sound"}
+                obj = {name: "", file: "no sound"}
             } else {
                 obj = {name: `Sound${++counter}`, file: audio.src}
             }
@@ -271,7 +305,7 @@ trackForm.addEventListener("submit", (e) => {
         })
         console.log(audioArray)
         console.log(e.target[0].value)
-        debugger
+        // debugger
         createCategory(e.target[0].value)
         e.target.reset()
     } else {
@@ -305,10 +339,15 @@ function getSingleUser(id) {
     fetch(userURL + `/${id}`)
         .then(res => res.json())
         .then(user => {
-            user.tracks.forEach(renderTrack)
-            document.querySelector(".djName").innerText = `Hi, DJ ${user.username}`
-            trackForm.dataset.id = user.id
-            editForm.dataset.id = user.id
+            if (user.error) {
+                console.log(user.error)
+            } else {
+                user.tracks.forEach(renderTrack)
+                document.querySelector(".djName").innerText = `Hi, DJ ${user.username}`
+                trackForm.dataset.id = user.id
+                editForm.dataset.id = user.id 
+            }
+            
         })
 }
 
@@ -384,6 +423,7 @@ function getUsers(name) {
                 const found = users.find(user => user.username.toLowerCase() == name.toLowerCase())
                 getSingleUser(found.id)
             } else {
+                console.log("made it")
                 createUser(name)
             }
         })
@@ -441,6 +481,7 @@ document.querySelector('.login-page form').addEventListener("submit", (e) => {
     e.preventDefault()
     document.querySelector('.loginModal').style.display = "none"
     getUsers(e.target[0].value)
+    // event listner for key press
 })
 
 // Record power and display buttons
@@ -452,28 +493,63 @@ document.querySelector(".power-button").addEventListener("click", () => {
         document.querySelector("#display").classList.remove('drum-display--on')
         document.querySelector(".volume-display").classList.remove('volume-display--on')
         document.querySelector(".power-button svg").setAttribute("fill", "grey")
+        document.removeEventListener("keypress", keyEvent)
+        // click event for saving sound and time interval into sound array
+        boxes.forEach(box => {
+            box.removeEventListener("click", colorAndPlay)
+        })
+        // event listener for save
+        save.removeEventListener("click", saveFun)
+        // Record button animation / recording 
+        recordBtn.removeEventListener("click", recordAni);	
+        // Event listener for play pause utton
+        playPause.removeEventListener("click", togglePlay)
+        document.querySelector(".vol-plus").removeEventListener("click", upVol)
+        document.querySelector(".vol-minus").removeEventListener("click", downVol)
+        // event listener for trash
+        document.querySelector(".trash").removeEventListener("click", trash)
+        testing()
+        instructions()
     } else {
         on = true
         document.querySelector("#display").innerText = "Welcome"
         document.querySelector("#display").classList.add('drum-display--on')
         document.querySelector(".volume-display").classList.add('volume-display--on')
         document.querySelector(".power-button svg").setAttribute("fill", "green")
+        document.addEventListener("keypress", keyEvent)
+        // click event for saving sound and time interval into sound array
+        boxes.forEach(box => {
+            box.addEventListener("click", colorAndPlay)
+        })
+        // event listener for save
+        save.addEventListener("click", saveFun)
+        testing()
+        // Record button animation / recording 
+        recordBtn.addEventListener("click", recordAni);	
+        // Event listener for play pause utton
+        playPause.addEventListener("click", togglePlay)
+        document.querySelector(".vol-plus").addEventListener("click", upVol)
+        document.querySelector(".vol-minus").addEventListener("click", downVol)
+        // event listener for trash
+        document.querySelector(".trash").addEventListener("click", trash)
+        instructions()
     }
     
 })
 
 let curVolume = 80
-document.querySelector(".vol-plus").addEventListener("click", () => {
+
+function upVol() {
     if (curVolume < 100) {
         updateVolume(++curVolume)
     }
-})
+}
 
-document.querySelector(".vol-minus").addEventListener("click", () => {
+function downVol() {
     if (curVolume > 0) {
         updateVolume(--curVolume)
     }
-})
+}
 
 function updateVolume() {
     track.forEach(audio => {
@@ -514,57 +590,82 @@ const audios = document.querySelectorAll("audio")
 let audioArray = []
 
 function testingAgain(e) {
-    console.log(e.target.innerText)
-    recordBtn.dataset.letter = e.target.innerText
-    e.target.removeEventListener("click", testingAgain)
+    if (e.type === "click") {
+        console.log(e.target.innerText)
+        recordBtn.dataset.letter = e.target.innerText    
+    } else if (e.key) {
+        for (let i = 0; i < boxes.length; i++) {
+            let box = boxes[i]
+            if (box.dataset.letter.toLowerCase() == e.key) {
+                console.log(box.dataset.letter)
+                recordBtn.dataset.letter = box.dataset.letter   
+            }
+        }
+    }
+    // e.target.removeEventListener("click", testingAgain)
 }
 
 async function recordSelf(e) {
     if (micRecord) {
         micRecord = false
     } else {
-        micRecord = true
-        console.log("Recording")
-        const activeBtn = document.querySelector(`.box[data-letter="${e.target.dataset.letter}"]`)
-        console.log(activeBtn)
-        const activeLtr = activeBtn.dataset.letter
-        console.log(activeLtr)
-        console.log('heya1')
-        const recorder = await recordAudio(activeLtr)
-        console.log('heya2')
-        recorder.start()
-        console.log('heya3')
-        // stopRecording(recorder)
-        var stopRecording = function(e) {
-            if (e.key === "p") {
-                micRecord = false
-                recordBtn.classList.toggle('Rec')
-                console.log("recording stopped");
-                recorder.stop(); //this triggers the creating the audio el
-            }
-            document.body.removeEventListener("keyup", stopRecording);
-            //document.body.removeEventListener("click", stopRecording);
-        };
-    
-        document.body.addEventListener("keyup", stopRecording);
+        if (e.key === "r" || e.type === "click") {
+            console.log(e)
+            micRecord = true
+            console.log("Recording")
+            const activeBtn = document.querySelector(`.box[data-letter="${recordBtn.dataset.letter}"]`)
+            console.log(activeBtn)
+            const activeLtr = activeBtn.dataset.letter
+            console.log(activeLtr)
+            console.log('heya1')
+            const recorder = await recordAudio(activeLtr)
+            console.log('heya2')
+            recorder.start()
+            console.log('heya3')
+            // stopRecording(recorder)
+            var stopRecording = function(e) {
+                if (e.key === "r" || e.type === "click") {
+                    micRecord = false
+                    console.log("recording stopped");
+                    recorder.stop(); //this triggers the creating the audio el
+                }
+                // document.body.removeEventListener("keyup", stopRecording);
+                recordBtn.removeEventListener("click", stopRecording);
+                recordBtn.addEventListener("click", recordSelf)
+                document.body.removeEventListener("keyup", stopRecording);
+                document.body.addEventListener("keyup", recordSelf);    
+
+            };
+            recordBtn.removeEventListener("click", recordSelf)
+            recordBtn.addEventListener("click", stopRecording);
+            document.body.removeEventListener("keyup", recordSelf);
+            document.body.addEventListener("keyup", stopRecording);
+        }
     }
 }
 
 function testing() {
-    if (inCategory == false) {
+    if (inCategory || on === false) {
+        boxes.forEach(box => {
+            box.removeEventListener("click", testingAgain)
+            box.removeEventListener("click", clickSound)
+        })
+        document.body.removeEventListener("keyup", testingAgain);
+        document.body.removeEventListener("keyup", playSound);
+        // document.addEventListener("keypress", keyEvent)
+        recordBtn.removeEventListener("click", recordSelf)
+    } else if (inCategory === false) {
+    
         boxes.forEach(box => {
             box.addEventListener("click", testingAgain)
             box.addEventListener("click", clickSound)
         })
+        document.body.addEventListener("keyup", testingAgain);
+        document.body.addEventListener("keyup", recordSelf);
         recordBtn.addEventListener("click", recordSelf)
+        document.body.addEventListener("keyup", recordSelf);
         document.body.addEventListener("keyup", playSound);
-    } else {
-        boxes.forEach(box => {
-            box.removeEventListener("click", testingAgain)
-        })
-        document.body.removeEventListener("keyup", playSound);
-        document.addEventListener("keypress", keyEvent)
-        recordBtn.removeEventListener("click", recordSelf)
+        // document.removeEventListener("keypress", keyEvent)
     }
 }
 
@@ -613,11 +714,14 @@ function recordAudio(key) {
 			new Promise(resolve => {
 				mediaRecorder.addEventListener("stop", stop);
 				function stop() {
-					const audioBlob = new Blob(audioChunks);
+                    // const audioBlob = new Blob(audioChunks);
+                    const audioBlob = new Blob(audioChunks, { 'type': 'audio/mp3' });
 					const audioUrl = URL.createObjectURL(audioBlob);
-					//creating audio el here
+                    //creating audio el here
+                    console.log(audioUrl)
+                    console.log(audioBlob)
 					console.log({ key });
-					addAudio(audioUrl, key);
+					addAudio(audioUrl, audioBlob, key);
 					mediaRecorder.removeEventListener("stop", stop);
 
 					resolve();
@@ -634,11 +738,13 @@ function recordAudio(key) {
     });
 }
 
-function addAudio(url, key) {
+function addAudio(url, blob, key) {
 	console.log("added audio");
 	const el = document.querySelector(`audio[data-key="${key}"]`);
 	el.playbackRate = 2.0;
-	el.src = url;
+    el.src = url;
+    // el.dataset.blob = JSON.stringify(blob)
+    console.log(JSON.stringify(blob))
 }
 
 testing()

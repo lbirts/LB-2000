@@ -75,10 +75,11 @@ function hideRecordDialog() {
 //this is true when you are recording (r key is pressed)
 let recording = false;
 
-document.body.addEventListener("keydown", record);
+document.body.addEventListener("keypress", record);
 
 async function record(e) {
 	if (e.key !== "r" || recording) return;
+	console.log(e.key)
 	console.log("recording");
 	recording = true;
 
