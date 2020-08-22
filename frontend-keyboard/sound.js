@@ -166,7 +166,7 @@ function playAudio(sound, newvolume) {
     
     const audio = new Audio(sound)
     audio.crossorigin = "anonymous"
-    debugger
+    // debugger
     console.log(audio)
     audio.volume = newvolume
     audio.play()
