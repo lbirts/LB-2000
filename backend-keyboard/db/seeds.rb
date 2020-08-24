@@ -17,8 +17,6 @@ c5 = Category.create!(name: "Wub")
 c6 = Category.create!(name: "Melody Tings")
 
 
-s1 = Sound.create(sound_name: "Fye Clap", filename: "../backend-keyboard/Media/MC-505/Claps/FyeClap.wav", category: c1)
-s27 = Sound.create(sound_name: "ThumbyKick", filename: "../backend-keyboard/Media/MC-505/Kicks/ThumbyKick1.wav", category: c1)
 s1 = Sound.create(sound_name: "Fye Clap", filename: "https://lbirts.github.io/LB-2000/backend-keyboard/Media/MC-505/Claps/FyeClap.wav", category: c1)
 s2 = Sound.create(sound_name: "Cricket Slap", filename: "https://lbirts.github.io/LB-2000/backend-keyboard/Media/MC-505/Claps/Slap20waCricketbat.wav", category: c1)
 s3 = Sound.create(sound_name: "Space Clap", filename: "https://lbirts.github.io/LB-2000/backend-keyboard/Media/MC-505/Claps/Space20Clap.wav", category: c1)
@@ -52,6 +50,7 @@ s12 = Sound.create(sound_name: "Roboboot", filename: "https://lbirts.github.io/L
 
 s28 = Sound.create(sound_name: "Pickle Rick", filename: "https://lbirts.github.io/LB-2000/backend-keyboard/Media/RKSounds/I'm Pickle Rick Sound Clip.mp3", category: c4)
 s29 = Sound.create(sound_name: "Wubba Lubba Dub", filename: "https://lbirts.github.io/LB-2000/backend-keyboard/Media/RKSounds/WUBBA LUBBA DUB DUB .mp3", category: c4)
+s30 = Sound.create(sound_name: "Rick Waiting", filename: "https://lbirts.github.io/LB-2000/backend-keyboard/Media/RKSounds/Rick Random.m4a", category: c4)
 s31 = Sound.create(sound_name: "Portal Gun", filename: "https://lbirts.github.io/LB-2000/backend-keyboard/Media/RKSounds/Portal Gun Sound.mp3", category: c4)
 s32 = Sound.create(sound_name: "Poof", filename: "https://lbirts.github.io/LB-2000/backend-keyboard/Media/RKSounds/Poof.m4a", category: c4)
 s33 = Sound.create(sound_name: "Show Me", filename: "https://lbirts.github.io/LB-2000/backend-keyboard/Media/RKSounds/SHOW ME WHAT YOU GOT.mp3", category: c4)
