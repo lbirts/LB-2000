@@ -25,6 +25,9 @@ If you would like to download on your computer, clone down the repository and fo
 
 Last worked on: August 2020
 
+### License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
 ## Authors and acknowledgement
 
 Built by Lauren Birts and Luis Bernal, Flatiron Software Engineering Houston 04/20/2020
