@@ -14,14 +14,17 @@ To record your own sounds click clear machine if there are sounds on the sound b
 
 If you would like to download on your computer, clone down the repository and follow the instructions below. Open your terminal and cd into the backend-keyboard folder. Run the rails s command to run the rails server. Open a new terminal and cd into the frontend-keyboard folder. Open the index.html file in your google chrome browser. 
 
-### Things to improve upon:
-   -Add the ability to download tracks
-   ~~-Persist recorded sounds~~
-
 ## Authors and acknowledgement
 
 Built by Lauren Birts and Luis Bernal, Flatiron Software Engineering Houston 04/20/2020
 
+
+## RoadMap
+
+### Things to improve upon:
+   -Add the ability to download tracks
+   
+   ~~-Persist recorded sounds~~
 
 ### Project Status
 
