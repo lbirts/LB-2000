@@ -4,10 +4,12 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- CSS & Bootstrap -->
+      <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon">
       <link rel="stylesheet" type="text/css" href="style.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
       <!-- JS-->
       <script defer rel="stylesheet" src="sound.js"></script>
+      <script src="https://sdk.amazonaws.com/js/aws-sdk-2.738.0.min.js"></script>    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <title>SoundBoard</title>
   </head>
   <body>
@@ -63,10 +65,11 @@
     <span><a class="edit entypo-pencil" data-toggle="modal" data-target="#editModal">Edit</a></span>
     </div>
     <!-- Record Button -->
-    <p class="text-white">Click the button to start/stop recording</p>
-    
+    <p class="text-white">Click the power button to start making fire beats</p>
     <!-- Sound Pad  -->
     <h1>Beat Power</h1>
+    <p class="text-white instructions"></p>
+    <button style="display: none" class="clear">Clear Machine</button>
     <div id="app">
       <div>
           <div id="drum-machine" class="drum-machine-body">
@@ -76,9 +79,9 @@
                       <div class="volume-display">Volume: 80 %</div>
                       <div class="button-panel">
                           <div role="button" class="power-button mt-2 mr-3 ml-2">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                  <path d="M256.026 0c-24.816 0-45.004 20.188-45.004 45.004V226.02c0 24.816 20.188 45.004 45.004 45.004s45.004-20.188 45.004-45.004V45.004C301.03 20.188 280.842 0 256.026 0z" fill="grey"></path>
-                                  <path d="M406.625 118.959c-18.939-17.083-46.502-15.14-63.041 1.873-16.632 17.109-17.917 46.086 3.153 65.296 33.44 30.395 50.343 76.459 42.336 122.928-10.868 63.067-65.717 112.767-133.05 112.915-68.971.152-121.809-50.77-132.708-110.617-8.497-46.747 7.179-93.553 41.972-125.197 21.01-19.127 19.913-48.232 3.234-65.36-16.567-17.013-44.295-18.851-63.4-1.56-52.909 47.923-80.527 118.769-72.843 190.58C44.496 423.995 140.9 512 256.553 512c114.326 0 207.934-88.216 222.368-194.743 10.064-74.23-16.964-148.358-72.296-198.298z" fill="grey"></path>
+                              <svg fill="grey" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                  <path d="M256.026 0c-24.816 0-45.004 20.188-45.004 45.004V226.02c0 24.816 20.188 45.004 45.004 45.004s45.004-20.188 45.004-45.004V45.004C301.03 20.188 280.842 0 256.026 0z"></path>
+                                  <path d="M406.625 118.959c-18.939-17.083-46.502-15.14-63.041 1.873-16.632 17.109-17.917 46.086 3.153 65.296 33.44 30.395 50.343 76.459 42.336 122.928-10.868 63.067-65.717 112.767-133.05 112.915-68.971.152-121.809-50.77-132.708-110.617-8.497-46.747 7.179-93.553 41.972-125.197 21.01-19.127 19.913-48.232 3.234-65.36-16.567-17.013-44.295-18.851-63.4-1.56-52.909 47.923-80.527 118.769-72.843 190.58C44.496 423.995 140.9 512 256.553 512c114.326 0 207.934-88.216 222.368-194.743 10.064-74.23-16.964-148.358-72.296-198.298z"></path>
                               </svg>
                           </div>
                           <div class="mt-2 pt-1 vol-plus mr-3"><img src="https://img.icons8.com/android/24/000000/speaker.png"/></div>
@@ -145,7 +148,6 @@
     <audio data-key="K"></audio>
     <audio data-key="L"></audio>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
