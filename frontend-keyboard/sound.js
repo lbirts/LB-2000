@@ -1,4 +1,27 @@
-// start of SOUND PAD CODE IGNORE ABOVE, DO not look, advert your eyes lol
+// AWS FILE UPLOAD CONFIG
+var bucketName = "lb-2000";
+var bucketRegion = "us-east-2";
+var IdentityPoolId = 'us-east-2:5a29f840-20ce-4cac-bcff-f1782db75d70';
+
+AWS.config.update({
+    region: bucketRegion,
+    credentials: new AWS.CognitoIdentityCredentials({
+        IdentityPoolId: IdentityPoolId
+    })
+});
+
+// AWS.config.credentials.get(function(err) {
+//     if (err) alert(err);
+// });
+
+var bucket = new AWS.S3({
+    apiVersion: '2006-03-01',
+    params: {
+        Bucket: bucketName
+    }
+});
+
+
 // Global URLs
 const categoryURL = "https://fierce-wildwood-65072.herokuapp.com/categories"
 const soundsURL = "https://fierce-wildwood-65072.herokuapp.com/sounds"
@@ -35,15 +58,11 @@ let inCategory = false
 function instructions() {
     if (on) {
         if (inCategory === false) {
-            console.log("cat",inCategory)
-            console.log("on", on)
             clear.style.display = "none"
-            instruct.innerText = "Want to record your own sounds? Click the a letter on the machine and hit record button and grab something around you (or use your mouth) to make some cool sounds. Once you are done click the record button to hear your sound play back. If you don't like the sound click the letter and record your sund again. Fill the entire board up with unique sounds by click another letter and recording a sound. Hear your sounds by click their respective letters. Once you have filled up the board click the save button to save your sound board so others can use your cool sounds."
+            instruct.innerText = " Want to record your own sounds? Click the a letter on the machine and hit record button and grab something around you (or use your mouth) to make some cool sounds. Once you are done click the record button to hear your sound play back. If you don't like the sound click the letter and record your sund again or click the trash button to delete your sound. Fill the entire board up with unique sounds by click another letter and recording a sound. Hear your sounds by click their respective letters. Once you have filled up the board click the save button to save your sound board so you can use your cool sounds to record a track."
         } else {
-            console.log("cat", inCategory)
-            console.log("on", on)
             clear.style.display = "block"
-            instruct.innerText = "Play around with the sounds to get a feel of the machine. Once you are ready to start recording, click the record button to start/stop your recording. Once you are done click the play button to hear your track back. If you are satisfied with your track click the save button to save your track to your profile otherwise click the trash button. Want to record your own sounds? Hit 'Clear Machine'."
+            instruct.innerText = "Play around with the sounds to get a feel of the machine. Once you are ready to start recording a track, click the record button to start/stop your recording. Once you are done click the play button to hear your track back. If you are satisfied with your track click the save button to save your track to your profile otherwise click the trash button. Want to record your own sounds? Hit 'Clear Machine'."
         }
     } else {
         instruct.innerText = ""
@@ -61,10 +80,11 @@ function clearMachine() {
             box.querySelector("p").remove()
         }
     }
-    console.log("cat", inCategory)
-    console.log("on", on)
-
+    boxes.forEach(box => {
+        box.dataset.sound = ""
+    })
     instructions()
+    testing()
 
 }
 
@@ -166,9 +186,8 @@ function playAudio(sound, newvolume) {
     
     const audio = new Audio(sound)
     audio.crossorigin = "anonymous"
-    debugger
-    console.log(audio)
     audio.volume = newvolume
+    // console.log(audio)
     audio.play()
 }
 
@@ -184,10 +203,12 @@ function checkingTrack(name, id) {
 function saveFun() {
     document.removeEventListener("keypress", keyEvent)
     document.body.removeEventListener("keyup", playSound);
+    document.body.removeEventListener("keyup", testingAgain);
 }
 
 // event listener for edit
 edit.addEventListener("click", () => {
+    document.body.removeEventListener("keyup", testingAgain);
     document.removeEventListener("keypress", keyEvent)
     document.body.removeEventListener("keyup", playSound);
 })
@@ -219,8 +240,17 @@ trackList.addEventListener("click", e => {
 })
 
 function trash() {
-    soundArray = []
-    track = []
+    if (inCategory) {
+        soundArray = []
+        track = []
+    } else {
+        const el = document.querySelector(`audio[data-key="${recordBtn.dataset.letter}"]`);
+        el.src = ""
+        blobs = blobs.filter(b => b.key !== recordBtn.dataset.letter)
+        console.log(blobs)
+        console.log(el.src)
+    }
+    
 }
 
 function keyEvent(e) {
@@ -247,10 +277,15 @@ editForm.addEventListener("submit", (e) => {
     editUsername(e.target.dataset.id, e.target[0].value)
     e.target.reset()
     document.addEventListener("keypress", keyEvent)
+    document.body.addEventListener("keyup", playSound);
+    document.body.addEventListener("keyup", testingAgain);
 })
 
 document.querySelectorAll(".close").forEach(el => el.addEventListener("click", () => {
     document.addEventListener("keypress", keyEvent)
+    document.body.addEventListener("keyup", playSound);
+    document.body.addEventListener("keyup", testingAgain);
+
 }))
 
 function colorAndPlay(e) {
@@ -270,8 +305,6 @@ sidepanel.addEventListener("click", e => {
     if (e.target.dataset.categoryId) {
         getSingleCategory(e.target)
         inCategory = true
-        console.log("cat", inCategory)
-        console.log("on", on)
         testing()
         instructions()
     }
@@ -297,15 +330,14 @@ trackForm.addEventListener("submit", (e) => {
         audios.forEach(audio => {
             let obj
             if (audio.src === "") {
-                obj = {name: "", file: "no sound"}
+                obj = {name: "", file: ""}
             } else {
-                obj = {name: `Sound${++counter}`, file: audio.src}
+                let soundBlob = blobs.find(b => b.key === audio.dataset.key)
+                obj = {name: `Sound${++counter}`, file: audio.src, blob: soundBlob.blob}
             }
             audioArray.push(obj)
         })
-        console.log(audioArray)
-        console.log(e.target[0].value)
-        // debugger
+        blobs = []
         createCategory(e.target[0].value)
         e.target.reset()
     } else {
@@ -313,9 +345,40 @@ trackForm.addEventListener("submit", (e) => {
         track = []
         soundArray = []
         e.target.reset()
-        document.addEventListener("keypress", keyEvent)
     }
+    document.addEventListener("keypress", keyEvent)
+    document.body.addEventListener("keyup", playSound);
+    document.body.addEventListener("keyup", testingAgain);
 })
+
+function uploadSound(sound, category) {
+    if (sound.name === "") {
+        return;
+    } else {
+    let filePath = `${category.name}/${sound.name}.wav`
+    let fileUrl = `https://${bucketName}.s3.${bucketRegion}.amazonaws.com/${filePath}`    
+
+    let file = sound.blob
+
+    let params = {
+        Key: filePath, 
+        Body: file,
+        ACL: 'public-read',
+        ContentType: "audio/webm"
+    };
+
+    bucket.upload(params, function(err, data) {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log("Success!!!")
+        }
+    })
+
+    createSounds(sound, category.id, fileUrl)
+    }
+
+}
 
 
 // fetch single category
@@ -368,10 +431,10 @@ async function createCategory(value) {
         .then(category => {
             delay = 0
             audioArray.forEach(sound => {
-                setTimeout(() => {
-                    createSounds(sound, category.id)
-                }, delay)
-                delay += 500
+                uploadSound(sound, category)
+                // setTimeout(() => {
+                // }, delay)
+                // delay += 500
             })
             renderCategory(category)
             audioArray = []
@@ -379,7 +442,7 @@ async function createCategory(value) {
 }
 
 // create sounds
-function createSounds(sound, categoryId) {
+function createSounds(sound, categoryId, fileUrl) {
     const options = {
         method: "POST",
         headers: {
@@ -388,13 +451,13 @@ function createSounds(sound, categoryId) {
         },
         body: JSON.stringify({
             sound_name: sound.name,
-            filename: sound.file,
+            filename: fileUrl,
             category_id: categoryId
         })
     }
     fetch(soundsURL, options)
         .then(res => res.json())
-        .then(console.log)
+        .then()
 }
 
 // create new user in database
@@ -423,7 +486,6 @@ function getUsers(name) {
                 const found = users.find(user => user.username.toLowerCase() == name.toLowerCase())
                 getSingleUser(found.id)
             } else {
-                console.log("made it")
                 createUser(name)
             }
         })
@@ -516,11 +578,11 @@ document.querySelector(".power-button").addEventListener("click", () => {
         document.querySelector("#display").classList.add('drum-display--on')
         document.querySelector(".volume-display").classList.add('volume-display--on')
         document.querySelector(".power-button svg").setAttribute("fill", "green")
-        document.addEventListener("keypress", keyEvent)
+        // document.addEventListener("keypress", keyEvent)
         // click event for saving sound and time interval into sound array
-        boxes.forEach(box => {
-            box.addEventListener("click", colorAndPlay)
-        })
+        // boxes.forEach(box => {
+        //     box.addEventListener("click", colorAndPlay)
+        // })
         // event listener for save
         save.addEventListener("click", saveFun)
         testing()
@@ -610,19 +672,14 @@ async function recordSelf(e) {
         micRecord = false
     } else {
         if (e.key === "r" || e.type === "click") {
-            console.log(e)
             micRecord = true
             console.log("Recording")
             const activeBtn = document.querySelector(`.box[data-letter="${recordBtn.dataset.letter}"]`)
-            console.log(activeBtn)
+            // console.log(activeBtn)
             const activeLtr = activeBtn.dataset.letter
             console.log(activeLtr)
-            console.log('heya1')
             const recorder = await recordAudio(activeLtr)
-            console.log('heya2')
             recorder.start()
-            console.log('heya3')
-            // stopRecording(recorder)
             var stopRecording = function(e) {
                 if (e.key === "r" || e.type === "click") {
                     micRecord = false
@@ -649,52 +706,50 @@ function testing() {
         boxes.forEach(box => {
             box.removeEventListener("click", testingAgain)
             box.removeEventListener("click", clickSound)
+            box.addEventListener("click", colorAndPlay)
         })
         document.body.removeEventListener("keyup", testingAgain);
         document.body.removeEventListener("keyup", playSound);
-        // document.addEventListener("keypress", keyEvent)
+        document.addEventListener("keypress", keyEvent)
         recordBtn.removeEventListener("click", recordSelf)
+        document.body.removeEventListener("keyup", recordSelf);
     } else if (inCategory === false) {
     
         boxes.forEach(box => {
             box.addEventListener("click", testingAgain)
             box.addEventListener("click", clickSound)
+            box.removeEventListener("click", colorAndPlay)
         })
         document.body.addEventListener("keyup", testingAgain);
         document.body.addEventListener("keyup", recordSelf);
         recordBtn.addEventListener("click", recordSelf)
-        document.body.addEventListener("keyup", recordSelf);
         document.body.addEventListener("keyup", playSound);
-        // document.removeEventListener("keypress", keyEvent)
+        document.removeEventListener("keypress", keyEvent)
     }
 }
 
 function clickSound(e) {
-    // console.log(e.target)
     if (micRecord) return;
     const key = e.target.dataset.letter;
     const sound = document.querySelector(`audio[data-key="${key}"]`);
     if (!sound) return;
-    console.log("playing");
+    // console.log("playing");
     sound.currentTime = 0;
     sound.play();
 }
 
 function playSound(e) {
-    // console.log(e.key)
-    // debugger
     if (micRecord) return;
     const key = e.key.toUpperCase();
     const sound = document.querySelector(`audio[data-key="${key}"]`);
     if (!sound) return;
-    console.log("playing");
+    // console.log("playing");
     sound.currentTime = 0;
     sound.play();
 }
 
 // record Audio
 function recordAudio(key) {
-	console.log(key);
 	return new Promise(async resolve => {
 		const stream = await navigator.mediaDevices.getUserMedia({
 			audio: true
@@ -706,7 +761,6 @@ function recordAudio(key) {
 			audioChunks.push(event.data);
 		});
 		const start = () => {
-			console.log("started");
 			return mediaRecorder.start();
 		};
 
@@ -715,12 +769,9 @@ function recordAudio(key) {
 				mediaRecorder.addEventListener("stop", stop);
 				function stop() {
                     // const audioBlob = new Blob(audioChunks);
-                    const audioBlob = new Blob(audioChunks, { 'type': 'audio/mp3' });
+                    const audioBlob = new Blob(audioChunks, {type: "audio/wav"});
 					const audioUrl = URL.createObjectURL(audioBlob);
                     //creating audio el here
-                    console.log(audioUrl)
-                    console.log(audioBlob)
-					console.log({ key });
 					addAudio(audioUrl, audioBlob, key);
 					mediaRecorder.removeEventListener("stop", stop);
 
@@ -737,14 +788,18 @@ function recordAudio(key) {
 		resolve({ start, stop });
     });
 }
-
+let blobs = []
 function addAudio(url, blob, key) {
-	console.log("added audio");
 	const el = document.querySelector(`audio[data-key="${key}"]`);
-	el.playbackRate = 2.0;
+    el.playbackRate = 2.0;
     el.src = url;
-    // el.dataset.blob = JSON.stringify(blob)
-    console.log(JSON.stringify(blob))
+    if (blobs.find(b => b.key === key)) {
+        blobs = blobs.filter(b => b.key !== key)
+        blobs.push({key: key, blob: blob})
+    } else {
+        blobs.push({key: key, blob: blob})
+    }
+    // el.dataset.blob = JSON.stringify({key: key, blob: blob})
 }
 
-testing()
+// testing()
