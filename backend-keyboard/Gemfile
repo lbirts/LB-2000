@@ -46,3 +46,9 @@ gem 'ddtrace'
 gem 'dogstatsd-ruby'
 
 gem 'datadog-lambda'
+
+gem "rack", ">= 2.2.3"
+
+gem "actionview", ">= 6.0.3.3"
+
+gem "actionpack", ">= 6.0.3.2"
